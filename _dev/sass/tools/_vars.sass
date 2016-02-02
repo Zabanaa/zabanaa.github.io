@@ -1,0 +1,42 @@
+// Font Variables
+$font: 'Source Sans Pro', sans-serif
+
+// Base Colors
+
+$lightgreen: lightgreen
+$peachpuff: peachpuff
+$papaya: papayawhip
+$medaquamarine: mediumaquamarine
+$lightgrey: lightgrey
+$whitesmoke: whitesmoke
+$lightsalmon: lightsalmon
+$cornsilk: cornsilk
+$moccasin: moccasin
+$medturquoise: mediumturquoise
+
+// Project Colors
+
+$primary: #FEED30
+$secondary: #FF6868
+$tertiary: #924992
+$quarternary: #504077
+
+// Map for social colors
+
+$social: ( facebook: #3B539A, twitter: #00ACED, gplus: #F12F1C, linkedin: #007BB6, pinterest: #CB2027, youtube: #BB0000, instagram: #517FA4, github: #161414, vimeo: #1BB8EE, dribbble: #ea4c89, soundcloud: #FF6600 )
+
+// Loop through the map and create style for each class
+@each $name, $value in $social
+
+   .icon--#{$name}
+
+      svg path
+
+         fill: $value
+         transition: all .3s ease-in
+
+      &:hover
+
+         svg path
+
+            fill: darken($value, 4%)

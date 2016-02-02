@@ -1,0 +1,715 @@
+// **** ANIMATION **** //
+
+// zerosixthree
+=animation($str)
+
+   -webkit-animation: #{$str}
+   -moz-animation: #{$str}
+   -ms-animation: #{$str}
+   -o-animation: #{$str}
+   animation: #{$str}
+
+// Animation Name
+=animation-name($name)
+
+   -webkit-animation-name: $name
+   -moz-animation-name: $name
+   -ms-animation-name: $name
+   -o-animation-name: $name
+   animation-name: $name
+
+// Animation duration
+=animation-duration($duration)
+
+   -webkit-animation-duration: $duration
+   -moz-animation-duration: $duration
+   -ms-animation-duration: $duration
+   -o-animation-duration: $duration
+   animation-duration: $duration
+
+// Animation iteration count
+=animation-iteration-count($count)
+
+   -webkit-animation-count: $count
+   -moz-animation-count: $count
+   -ms-animation-count: $count
+   -o-animation-count: $count
+   animation-count: $count
+
+// Animation direction
+=animation-direction($direction)
+
+   -webkit-animation-direction: $direction
+   -moz-animation-direction: $direction
+   -ms-animation-direction: $direction
+   -o-animation-direction: $direction
+   animation-direction: $direction
+
+// Animation timing function
+=animation-timing-function($timing-function)
+
+   -webkit-animation-timing-function: $timing-function
+   -moz-animation-timing-function: $timing-function
+   -ms-animation-timing-function: $timing-function
+   -o-animation-timing-function: $timing-function
+   animation-timing-function: $timing-function
+
+
+// Animation Fill mode
+=animation-fill-mode($fill-mode)
+
+   -webkit-animation-fill-mode: $fill-mode
+   -moz-animation-fill-mode: $fill-mode
+   -ms-animation-fill-mode: $fill-mode
+   -o-animation-fill-mode: $fill-mode
+   animation-fill-mode: $fill-mode
+
+// Animation delay
+=animation-delay($delay)
+
+   -webkit-animation-delay: $delay
+   -moz-animation-delay: $delay
+   -ms-animation-delay: $delay
+   -o-animation-delay: $delay
+   animation-delay: $delay
+
+
+// thought bot
+=keyframes($name)
+   @-webkit-keyframes #{$name}
+      @content
+   @-moz-keyframes #{$name}
+      @content
+   @-ms-keyframes #{$name}
+      @content
+   @keyframes #{$name}
+      @content
+
+// Fade In
++keyframes(fadeIn)
+
+   0%
+      opacity: 0
+      transform: scale3d(0,0,0)
+
+   50%
+      opacity: 0.5
+      transform: scale3d(0.6,0.6,1)
+
+   100%
+      opacity: 1
+      transform: scale3d(1,1,1)
+
+.fade-in
+   // +animation('fadeIn 1s linear both')
+   +animation-name(fadeIn)
+   +animation-duration(1s)
+   +animation-timing-function(linear)
+   +animation-fill-mode(both)
+
+// Fade In Down
+
++keyframes(fadeInDown)
+
+   0%
+      transform: translate3d(0,-30px,0)
+      opacity: 0
+
+   50%
+      opacity: 0.5
+
+   100%
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+.fade-in-down
+   +animation('fadeInDown 1s linear both')
+   visibility: visible !important
+
+// Fade In Left
+
++keyframes(fadeInLeft)
+
+   0%
+      transform: translate3d(-30px,0,0)
+      opacity: 0
+
+   50%
+      opacity: 0.5
+
+   100%
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+.fade-in-left
+   +animation('fadeInLeft 1s linear both')
+   visibility: visible !important
+
+
+// Fade In Right
+
++keyframes(fadeInRight)
+
+   0%
+      transform: translate3d(30px,0,0)
+      opacity: 0
+
+   50%
+      opacity: 0.5
+
+   100%
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+.fade-in-right
+   +animation('fadeInRight 1s linear both')
+   visibility: visible !important
+
+
+// Fade In Up
+
++keyframes(fadeInUp)
+
+   0%
+      transform: translate3d(0,30px,0)
+      opacity: 0
+
+   50%
+
+      opacity: 0.45
+
+   100%
+
+      transform: translate3d(0,0,0)
+
+.fade-in-up
+   +animation('fadeInUp 1s linear both')
+   visibility: visible !important
+
+
+// Shake
+
++keyframes(shake)
+
+   0%, 100%
+      transform: translate3d(0,0,0)
+
+   15%, 45%, 75%
+      transform: translate3d(20px,0,0)
+
+   30%, 60%
+      transform: translate3d(-20px,0,0)
+
+.shake
+   +animation('shake 1s ease-out both')
+   visibility: visible !important
+
+
+// Pulse scale
+
++keyframes(pulseScale)
+
+   0%, 100%
+      opacity: 0.6
+      transform: scale3d(1,1,1)
+
+   50%
+      opacity: 1
+      transform: scale3d(1.2,1.2,1.2)
+
+.pulse-scale
+   +animation('pulseScale 1s infinite ease-out both')
+   visibility: visible !important
+
+
+// Fade In Scale Bounce
+
++keyframes(fadeInScaleBounce)
+
+   0%
+      opacity: 0
+      transform: scale3d(1,1,1)
+   40%
+      transform: scale3d(1.2,1.2,1.2)
+   60%
+      transform: scale3d(0.85,0.85,1)
+
+   80%
+      transform: scale3d(1.04,1.04,1.04)
+   100%
+      opacity: 1
+      transform: scale(1,1,1)
+
+.fade-in-scale-bounce
+   +animation('fadeInScaleBounce 1s ease-out both')
+   visibility: visible !important
+
+// Flip in Y // ANIMATE.CSS
+
++keyframes(flipTop)
+
+   0%
+      transform: perspective(400deg)
+      transform: rotate3d(1,0,0, 90deg)
+      opacity: 0
+
+   40%
+
+      transform: perspective(400deg)
+      transform: rotate3d(1,0,0, -30deg)
+
+
+   60%
+
+      transform: perspective(400deg)
+      transform: rotate3d(1,0,0, 15deg)
+      opacity: 1
+
+   80%
+      transform: perspective(400deg)
+      transform: rotate3d(1,0,0, -10deg)
+
+   100%
+
+      transform: perspective(400deg)
+
+.flip-top
+   +animation('flipTop 1s ease-out both')
+   visibility: visible !important
+
+// Spin Clockwise
+
++keyframes(spin)
+
+   0%
+      transform: rotate(0deg)
+
+   100%
+      transform: rotate(360deg)
+
+.spin-clockwise
+   +animation('spin 1s infinite linear')
+   visibility: visible !important
+
+.spin-reverse
+   +animation('spin 1s infinite reverse linear')
+   visibility: visible !important
+
+
+// Bounce In Down
+
++keyframes(bounceInDown)
+
+   0%
+      transform: translate3d(0,-70px,0)
+      opacity: 0
+
+   30%, 100%
+
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+   56%
+      transform: translate3d(0, 20px, 0)
+
+   73%
+      transform: translate3d(0, -10px, 0)
+
+   87%
+      transform: translate3d(0, 5px,  0)
+
+.bounce-in-down
+   +animation('bounceInDown 1s ease-out both')
+   visibility: visible !important
+
+// Bounce In Up
+
++keyframes(bounceInUp)
+
+   0%
+      transform: translate3d(0, 70px, 0)
+      opacity: 0
+
+   30%
+
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+   56%
+
+      transform: translate3d(0, -20px, 0)
+
+   73%
+
+      transform: translate3d(0, 10px, 0)
+
+   87%
+      transform: translate3d(0, -5px, 0)
+
+   100%
+      transform: translate3d(0,0,0)
+
+.bounce-in-up
+   +animation('bounceInUp 1s linear both')
+   visibility: visible !important
+
+// Bounce In Left
+
++keyframes(bounceInLeft)
+
+   0%
+      opacity: 0
+      transform: translate3d(-70px, 0, 0)
+   30%
+      opacity: 1
+      transform: translate3d(20px, 0, 0)
+   56%
+      transform: translate3d(-12px, 0, 0)
+
+   73%
+      transform: translate3d(8px, 0, 0)
+
+   87%
+      transform: translate3d(-3px, 0, 0)
+
+   100%
+      transform: translate3d(0,0,0)
+
+.bounce-in-left
+   +animation('bounceInLeft 1s ease-in-out both')
+   visibility: visible !important
+
+// Bounce In Right
+
++keyframes(bounceInRight)
+
+   0%
+      opacity: 0
+      transform: translate3d(70px, 0, 0)
+   30%
+      opacity: 1
+      transform: translate3d(-20px, 0, 0)
+   56%
+      transform: translate3d(12px, 0, 0)
+
+   73%
+      transform: translate3d(-8px, 0, 0)
+
+   87%
+      transform: translate3d(3px, 0, 0)
+
+   100%
+      transform: translate3d(0,0,0)
+
+.bounce-in-right
+   +animation('bounceInRight 1s ease-in-out both')
+   visibility: visible !important
+
+// Bounce In Left
+
++keyframes(bounceInScale)
+
+   0%
+      opacity: 0
+      transform: scale3d(0,0,0)
+   30%
+
+      transform: scale3d(1.25, 1.25, 1)
+   56%
+      transform: scale3d(0.75, 0.75, 1)
+      opacity: 1
+   73%
+      transform: scale3d(1.15, 1.15, 1)
+   87%
+      transform: scale3d(0.87,0.87,1)
+   100%
+      transform: scale3d(1,1,1)
+
+.bounce-in-scale
+   +animation('bounceInScale 1s ease-out both')
+   visibility: visible !important
+
+// Fade Out
+
++keyframes(fadeOut)
+
+   0%
+      opacity: 1
+      transform: scale3d(1,1,1)
+
+   50%
+
+      opacity: .5
+
+   100%
+
+      opacity: 0
+      transform: scale(0,0,0)
+
+.fade-out
+   +animation('fadeOut 1s ease-out both')
+   visibility: visible !important
+
+
+// Fade Out Up
+
++keyframes(fadeOutUp)
+
+   0%
+      opacity: 1
+      transform: translate3d(0,0,0)
+
+   50%
+      opacity: .5
+
+   100%
+      opacity: 0
+      transform: translate3d(0, -55px, 0)
+
+.fade-out-up
+   +animation('fadeOutUp 1s ease-out both')
+   visibility: visible !important
+
+// Fade Out Left
+
++keyframes(fadeOutLeft)
+
+   0%
+      opacity: 1
+      transform: translate3d(0,0,0)
+
+   50%
+      opacity: .5
+
+   100%
+      opacity: 0
+      transform: translate3d(-55px, 0,0)
+
+.fade-out-left
+   +animation('fadeOutLeft 1s linear both')
+   visibility: visible !important
+
+// Fade Out Right
+
++keyframes(fadeOutRight)
+
+   0%
+      opacity: 1
+      transform: translate3d(0,0,0)
+
+   50%
+      opacity: .5
+
+   100%
+      opacity: 0
+      transform: translate3d(55px, 0, 0)
+
+.fade-out-right
+   +animation('fadeOutRight 1s linear both')
+   visibility: visible !important
+
+// Fade Out Down
+
++keyframes(fadeOutDown)
+
+   0%
+      opacity: 1
+      transform: translate3d(0,0,0)
+
+   50%
+      opacity: .5
+
+   100%
+      opacity: 0
+      transform: translate3d(0, 55px, 0)
+
+.fade-out-down
+   +animation('fadeOutDown 1s linear both')
+   visibility: visible !important
+
+// Gravitate Y [Inspired by Justin Aguilar. http://www.justinaguilar.com/animations/index.html]
++keyframes(gravitateY)
+
+   0%
+      transform: translate3d(0,0,0)
+
+   35%
+      transform: translate3d(0, 20px, 0)
+
+   75%
+      transform: translate3d(0, -20px, 0)
+
+   100%
+      transform: translate3d(0,0,0)
+
+.gravitate-y
+   +animation('gravitateY 1s infinite linear')
+   visibility: visible !important
+
+
+// Ghost Material Button
+
++keyframes(vanishIn)
+
+   0%
+      opacity: 0
+      transform: scale3d(1.5,1.5,1.5)
+      filter: blur(30px)
+
+   50%
+
+      opacity: .5
+
+   100%
+      opacity: 1
+      transform: scale3d(1,1,1)
+      filter: blur(0)
+
+.vanish-in
+   +animation('vanishIn .65s ease-out both')
+   visibility: visible !important
+
+// Ghost Material Button
+
++keyframes(vanishOut)
+
+   0%
+      opacity: 1
+      transform: scale3d(1,1,1)
+      filter: blur(0)
+
+   50%
+      opacity: .5
+
+   100%
+      transform: scale3d(2,2,2)
+      filter: blur(30px)
+      opacity: 0
+
+.vanish-out
+   +animation('vanishOut 1s ease-out both')
+   visibility: visible !important
+
+
+// EXPAND X
+
++keyframes(expandX)
+
+   0%
+      transform: scale3d(0,1,1)
+
+   50%
+      transform: scale3d(0.5, 1, 1)
+
+   100%
+      transform: scale3d(1,1,1)
+
+.expand-left
+   +animation('expandX 1s linear both')
+   +transform-origin(right center)
+   visibility: visible !important
+
+.expand-right
+   +animation('expandX 1s linear both')
+   +transform-origin(left center)
+   visibility: visible !important
+
+// EXPAND BOUNCE X
+
++keyframes(expandBounceX)
+
+   0%
+      transform: scale3d(0, 1, 1)
+   30%
+      transform: scale3d(1,1,1)
+   53%
+      transform: scale3d(0.91, 1, 1)
+   64%
+      transform: scale3d(1, 1, 1)
+   87%
+      transform: scale3d(0.96, 1, 1)
+   100%
+      transform: scale3d(1,1,1)
+
+.expand-bounce-right
+   +animation('expandBounceX 1s linear both')
+   +transform-origin(left center)
+   visibility: visible !important
+
+.expand-bounce-left
+   +animation('expandBounceX 1s linear both')
+   +transform-origin(right center)
+   visibility: visible !important
+
+// EXPAND Y
+
++keyframes(expandY)
+
+   0%
+      transform: scale3d(1, 0, 1)
+   50%
+      transform: scale3d(1, 0.5, 1)
+   100%
+      transform: scale3d(1,1,1)
+
+.expand-top
+   +animation('expandY 1s linear both')
+   +transform-origin(bottom center)
+   visibility: visible !important
+
+.expand-bottom
+   +animation('expandY 1s linear both')
+   +transform-origin(top center)
+   visibility: visible !important
+
+// ELASTICO
+
++keyframes(elastico)
+
+   0%
+      transform: scale3d(1, 1, 1)
+      opacity: 0
+   20%
+      transform: scale3d(1.4, 1, 1)
+   43%
+      transform: scale3d(.81, 1, 1)
+      opacity: 1
+   57%
+      transform: scale3d(1.2, 1, 1)
+   69%
+      transform: scale3d(.89, 1, 1)
+   77%
+      transform: scale3d(1.1, 1, 1)
+   89%
+      transform: scale3d(.91, 1, 1)
+   100%
+      transform: scale3d(1,1,1)
+
+.elastico
+   +animation('elastico 1s linear both')
+   visibility: visible !important
+
+// WOBBLE
+
++keyframes(wobble)
+
+   0%
+      transform: scale3d(1,1,1)
+   20%
+      transform: scale3d(1.6,1.4,1.6)
+   43%
+      transform: scale3d(0.81,0.96,0.81)
+   57%
+      transform: scale3d(1.4,1.2,1.4)
+   69%
+      transform: scale3d(.89,0.97,.89)
+   77%
+      transform: scale3d(1.2,1.1,1.2)
+   89%
+      transform: scale3d(.91,0.98,.91)
+   100%
+      transform: scale3d(1,1,1)
+
+.wobble
+   +animation('wobble 1s linear both')
+   visibility: visible !important
