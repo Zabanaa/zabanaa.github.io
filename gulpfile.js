@@ -62,10 +62,11 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function() {
 
-    return gulp.src('_dev/js/app.js')
+    return gulp.src('_dev/js/*.js')
         .pipe(babel({
             presets: ['es2015']
         }))
+        .pipe( concat('app.js'))
         .pipe( uglify() )
         .pipe(gulp.dest('_site/assets/js'))
         .pipe(browserSync.reload({stream:true}))

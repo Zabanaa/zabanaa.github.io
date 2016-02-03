@@ -1,1 +1,1 @@
-"use strict";var message="this is es6 bitch";console.log(message);
+"use strict";var message2="this is es6 bitch message 2";console.log(message2);var message="this is es6 bitch";console.log(message);
