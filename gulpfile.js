@@ -58,6 +58,18 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('imagemin', function() {
+
+    return gulp.src('_dev/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('_site/assets/img'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/img'));
+
+
+})
+
+
 // Scripts compiling and concatenation
 
 gulp.task('scripts', function() {
@@ -97,6 +109,7 @@ gulp.task('watch', function () {
     gulp.watch('_dev/sass/**/*.sass', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_dev/jade/*', ['jade']);
+    gulp.watch('_dev/img/*', ['imagemin']);
     gulp.watch('_dev/js/*', ['scripts']);
 });
 
