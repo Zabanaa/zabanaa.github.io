@@ -4,6 +4,12 @@
 @import 'footer'
 
 body
-    margin: 1em
-    background-color: $secondary
+
     overflow-x: hidden
+
+    +tablet-up
+        margin: 1em
+        background-color: $secondary
+
+.site-container
+    box-shadow: 0 0 5px darken(#F5F5F5, 87%)

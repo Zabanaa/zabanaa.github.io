@@ -9,6 +9,9 @@ h1,h2,h3,h4,h5,h6
     font-family: $headings
     font-weight: 700
 
+ul, p, input, button, a, span
+    font-family: $content
+
 ul
     list-style: none
 
@@ -36,3 +39,9 @@ button
     border: none
     outline: 0
     cursor: pointer
+
+section:not(.splash)
+    padding: 2em 0
+
+    +tablet-up
+        padding: 4em 0
