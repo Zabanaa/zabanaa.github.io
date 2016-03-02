@@ -1,0 +1,87 @@
+.portfolio
+    text-align: center
+
+.portfolio__project
+
+    display: flex
+    flex-direction: column
+    border-top: 1px solid darken(#F5F5F5, 21%)
+    height: auto
+
+    +mobile
+
+        &:nth-child(2),
+        &:nth-child(3),
+            display: none
+
+    +desktop-up
+        flex-direction: row
+        height: 400px
+
+        &:nth-child(2n) .project__name
+            order: 2
+
+    &:nth-child(2) .project__name a
+
+        color: rgba(1,1,1, 0.7)
+
+    &:nth-child(5) .project__name a
+
+        color: #21364b
+
+.project__name
+
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    flex-grow: 1
+    color: $secondary
+    position: relative
+    padding: 3em 0
+
+
+    +desktop-up
+        padding: 0
+
+
+    h2
+        font-size: 2.3em
+        margin-bottom: 1em
+
+    a
+        font-size: 1.3em
+        padding: .5em 1em
+        box-shadow: none
+        transition: all .23s ease
+
+        &:hover
+            box-shadow: 0px 0px 3px $secondary
+
+.project__description
+
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    padding: 2em
+    background-color: $secondary
+
+    +tablet-up
+        padding: 4em
+        flex-basis: 70%
+
+    +desktop-up
+        padding: 0 4em
+
+
+    p
+        color: $text
+        text-shadow: 0 0 1px lighten($text, 56%)
+        margin-bottom: 1em
+
+        +mobile
+            font-size: .9em
+
+        &:last-child
+            margin-bottom: 0

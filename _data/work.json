@@ -1,0 +1,72 @@
+[
+
+    {
+        "title": "Dribble Portfolio",
+
+        "description_one": "This is a project I started (and completed) with no other purpose than trying to learn to interact with 'real' apis. I had experience
+        making ajax calls but I really wanted to create something useful with a real practical application.",
+
+        "description_two": "I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his dribbble shots so I wanted to see if it was possible to pull that information dynamically.",
+
+        "description_three": "Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience",
+
+        "background-color": "#679895",
+        "button-color": "#5d8986",
+        "url": "http://zabana.bitballoon.com/"
+
+    },
+    
+    {
+        "title": "Rihanna's Form",
+        "description_one": "Now this is a really fun one. After learning so much about Promises and ES6, I felt unstoppable and decided to push myself to learn RegEx (which I swore to myself I would never learn because I was too afraid).",
+
+        "description_two": "One of the most common use cases I found for Regex is form validation. Like Rainy Day, I used and coded a Design created by Mackenzie Child this time. Full credit goes to him for this beautiful piece.",
+
+        "description_three": "This helped me improve my Regex knowledge, specifically how to write patterns and check it there is a match. I can now better control user input and check what keys are being pressed by the user. WARNING: Turn down the volume after successfully submitting the form ^^.",
+
+        "background-color": "#31355b",
+        "button-color": "#4299ed",
+        "url": "http://rihanna-form.bitballoon.com/"
+
+    },
+    {
+        "title": "Focus",
+        "description_one": "The Javascript Audio API had been sitting on my to learn list for too long so I decided to do something about it. Focus is pretty much a clone of noisli, an app I use quite frequently that helps me get into the zone.",
+
+        "description_two": "So I went on dribble to find inspiration and came up with Focus. The idea is literally the same as noisli. You can play a track, stop it, go to the next or previous one and change the volume using the range input",
+
+        "description_three": "I'm quite happy with the end result and really enjoyed working on this. It's fully functional so you can try it out if you want !",
+
+        "background-color": "#f8c687",
+        "button-color": "#005361",
+        "url": "http://focus-focus.bitballoon.com/"
+    },
+    {
+        "title": "Smoothie / Milky",
+
+        "description_one": "Smoothie is my own personal animatitions library. I was frustrated to use css classes to toggle animations so I decided to create a SASS only (not SCSS) animations library. It's inspired by a lot of different tools like animate.css and others. I use it on pretty much all my projects.",
+
+        "description_two": "Milky is the front end started kit I created for myself because I was getting tired of having to setup the same folder structure for every single project. I use Milky as the base for all my new sites / experiments.",
+
+        "description_three": "It comes packed with a lot of goodies including Gulp, Browserify, Babel, ReactJS, BrowserSync, Jade, Sass and more ! And of couse, you're more than welcome to contribute to it !",
+
+        "background-color": "#21364b",
+        "button-color": "#fae298",
+        "url": "https://github.com/CerealCoder/Milky"
+    },
+    {
+        "title": "Cereal Notes",
+
+        "description_one": "After a million AJAX calls, I finally realised that I had a thing for Data Manipulation. That lead me to teach myself Python (after buying a Raspberry PI) and SQL. I immediately fell in love with Python and its beaufiful syntax and I decided that it was time for me to pick a framework",
+
+        "description_two": "The choice wasn't easy between Django and Flask, but I eventually picked Django mainly for the documentation that I find quite clear and understandable. Cereal Notes is basically me Teaching myself all kinds of fun things related to the framework. I absolutely love it. ",
+
+        "description_three": "Because of that, I was able to learn about data processing through forms and POST requests, how to filter data based on URL parameters, how to register / login-out users, HttpResponses, template context etc. I'm also trying to build a RESTful service for it. We'll see how it goes !",
+
+        "background-color": "#E29470",
+        "button-color": "#CE672D",
+        "url": "#"
+
+    },
+
+]
