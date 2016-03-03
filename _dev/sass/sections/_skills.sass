@@ -1,0 +1,41 @@
+.skills
+    text-align: center
+    border-top: 1px solid black
+    padding-left: 1em !important
+    padding-right: 1em !important
+
+
+.skills__header
+
+    +tablet-up
+        font-size: 2.3em
+
+.skills__list
+
+    max-width: 65em
+    margin: 0 auto 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: column
+
+
+    li:nth-child(1),
+    li:nth-child(6)
+        display: none
+
+
+    +tablet-up
+        flex-direction: row
+        flex-wrap: wrap
+
+    +desktop-up
+        li:nth-child(1),
+        li:nth-child(6)
+            display: block
+
+    svg
+        width: 190px
+
+        +tablet-up
+            width: 90px
