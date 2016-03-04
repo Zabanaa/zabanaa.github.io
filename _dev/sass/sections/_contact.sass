@@ -1,0 +1,45 @@
+.contact
+    display: flex
+    color: $secondary
+    flex-direction: column
+
+    +tablet-up
+        flex-direction: row
+
+    > .contact__cv,.contact__email
+
+        padding: 2em 0
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 200px
+        font-size: 1.3em
+
+        +tablet-up
+            flex-basis: 50%
+            height: auto
+
+        +desktop-up
+            font-size: 2.5em
+
+.contact__cv
+
+    background-color: $primary
+    flex-direction: column
+
+    span
+        display: block
+        margin-bottom: 1em
+
+    svg
+
+        +size(65px)
+
+        +desktop-up
+            +size(100px)
+
+        path
+            fill: $secondary
+
+.contact__email
+    background-color: $tertiary
