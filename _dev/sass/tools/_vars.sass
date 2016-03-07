@@ -2,19 +2,14 @@
 $projects: 'Pacifico', sans-serif
 $content: 'Fira Sans', sans-serif
 $headings: 'Lato', sans-serif
-// Project Colors
 
-$primary: #1A6BB3
-$secondary:  #F5F5F9
-$tertiary:  #E73D4F
+// Project Colors
+$primary: #28283D
+$secondary:  #EEEEEE
+$tertiary:  #E0CDBC
+$quarternary: #5D5D6D
 $text: #63565B
 
-$project-dribble: #EF476F
-$project-rainyday: #3FA7D6
-$project-rihanna: #FFD166
-$project-focus: #985277
-$project-smoothie: #06D6A0
-$project-cerealnotes: #345995
 
 $splash-cereals-bg: #E4E3E1
 $splash-code-bg: #363B41
@@ -27,15 +22,15 @@ $social: ( facebook: #3B539A, twitter: #00ACED, gplus: #F12F1C, linkedin: #007BB
 // Loop through the map and create style for each class
 @each $name, $value in $social
 
-   .icon--#{$name}
+    .icon--#{$name}
 
-      svg path
+        svg path
 
-         fill: $value
-         transition: all .3s ease-in
+            fill: $value
+            transition: all .3s ease-in
 
-      &:hover
+            &:hover
 
-         svg path
+                svg path
 
-            fill: darken($value, 4%)
+                fill: darken($value, 4%)
