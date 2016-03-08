@@ -1,0 +1,33 @@
+[
+
+    {
+        "title": "Netptik",
+
+        "description_one": "First experience at an agency as an intern. Right away I was trusted and given ownership of the projects I worked on. At neptik I worked in a team of 4 designers / developers. During my time there I was able to learn about how wordpress templating works. I was introduced to technologies like Vagrant and Grunt blablabla cool heheh",
+
+        "description_two": "I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his dribbble shots so I wanted to see if it was possible to pull that information dynamically.",
+
+        "description_three": "Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience",
+
+        "background-color": "#679895",
+        "button-color": "#5d8986",
+        "url": "http://zabana.bitballoon.com/"
+
+    },
+
+    {
+        "title": "Dribble Portfolio",
+
+        "description_one": "This is a project I started (and completed) with no other purpose than trying to learn to interact with 'real' apis. I had experience
+        making ajax calls but I really wanted to create something useful with a real practical application.",
+
+        "description_two": "I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his dribbble shots so I wanted to see if it was possible to pull that information dynamically.",
+
+        "description_three": "Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience",
+
+        "background-color": "#679895",
+        "button-color": "#5d8986",
+        "url": "http://zabana.bitballoon.com/"
+
+    }
+]

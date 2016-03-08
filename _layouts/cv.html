@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <body>
+        <main class="site-container">
+
+            <header class="cv-personal">
+
+                <section class="cv-personal__details no-padding">
+
+                    <ul class="details-list">
+                        <li class="name">Karim Cheurfi</li>
+                        <li class="age">24 years old</li>
+                        <li class="location">Location: Brighton</li>
+                        <li class="phone">Phone: <a href="tel:07548698753">07548698753</a></li>
+                        <li class="skype">Skype: <a href="skype:karim.cheurfi1">karim.cheurfi1</a></li>
+                        <li class="email">E-mail: <a href="mailto: karim.cheurfi@gmail.com">karim.cheurfi@gmail.com</a></li>
+                    </ul>
+
+                </section>
+
+                <section class="cv-personal__statement no-padding">
+
+                    <article>
+
+                        <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut, fresh coconut, trust me. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. It’s on you how you want to live your life. Everyone has a choice. I pick my choice, squeaky clean. They don’t want us to win. Don’t ever play yourself.</p>
+
+                    </article>
+
+                </section>
+
+            </header>
+
+            {% for job in site.data.jobs %}
+
+            <section class="cv-experience no-padding">
+
+                <div class="company-info">
+
+                    <ul>
+                        <li class="company-name">Neptik LTD</li>
+                        <li class="company-position">Front End Developer</li>
+                        <li class="company-dates">January - April 2015</li>
+                        <li class="company-location">Brighton - North Laines</li>
+                    </ul>
+
+                </div>
+
+                <article class="company-experience">
+
+                    <p>{{job.description_two}}</p>
+                    <p>{{job.description_two}}</p>
+
+                </article>
+
+            </section>
+
+            {% endfor %}
+
+            <section class="cv-skills no-padding">
+
+                <div class="skillset">
+                    <h3><span>Languages/Frameworks</span></h3>
+
+                    <ul>
+                        <li>HTML5 / Jade</li>
+                        <li>CSS3 / Sass / Bourbon / Neat</li>
+                        <li>CSS Layouts (Grids, Flexbox, BEM)</li>
+                        <li>Javascript (Angular, ES6, Ajax, Promises)</li>
+                        <li>NodeJS (Express JS)</li>
+                        <li>Python (Django)</li>
+                        <li>SQL (SQLite, MySQL, MongoDB)</li>
+                    </ul>
+
+                </div>
+
+                <div class="skillset special">
+
+                    <h3><span>Tools</span></h3>
+
+                    <ul>
+
+                        <li>Version Control - (Git)</li>
+                        <li>Build Tools (Gulp, Grunt)</li>
+                        <li>Package Managers (Npm, Bower)</li>
+                        <li>Atom / Vim </li>
+                        <li>Slack</li>
+                    </ul>
+
+
+                </div>
+
+                <div class="skillset">
+
+                    <h3><span>Other</span></h3>
+
+                    <ul>
+                        <li>Team Member</li>
+                        <li>Independent and Curious</li>
+                        <li>Ability to work with backend developers</li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            {% include ga.html %}
+            {% include footer.html %}
+
+            <script src="/assets/js/app.js"></script>
+
+        </main>
+    </body>
+</html>

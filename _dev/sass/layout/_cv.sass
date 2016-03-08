@@ -1,0 +1,183 @@
+.cv-personal
+
+    background-color: dodgerblue
+    display: flex
+    flex-direction: column
+
+    +desktop-up
+        flex-direction: row
+
+    > section
+
+        padding: 3em 0
+        display: flex
+        align-items: center
+        justify-content: center
+
+// Header
+
+.cv-personal__details
+    flex-grow: 1
+    background-color: $primary
+    color: $tertiary
+
+.details-list
+
+    li a
+        text-decoration: underline
+
+    .name
+
+        font-size: 2.3em
+        font-weight: 600
+
+    .age
+        font-size: 1.8em
+
+    .location, .phone, .skype, .email
+        font-size: 1.2em
+
+.cv-personal__statement
+
+    background-color: $tertiary
+    color: $primary
+    padding-left: 2em !important
+    padding-right: 2em !important    
+    text-align: center
+
+    +tablet-up
+        padding-left: 3em !important
+        padding-right: 3em !important
+
+    +desktop-up
+        flex-basis: 66.666666%
+        padding-left: 4em !important
+        padding-right: 4em !important
+        text-align: left
+
+
+// Training and Experience
+
+.cv-experience
+    display: flex
+    border-bottom: 1px solid $quarternary
+    flex-direction: column
+
+    +desktop-up
+        flex-direction: row
+
+    .company-info, .company-experience
+        padding: 3em 0
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &:nth-child(3) .company-info
+
+        border-bottom: none
+
+.company-info
+
+    background-color: $quarternary
+    flex-grow: 1
+    color: white
+    border-bottom: 1px solid white
+
+    ul li
+
+        margin-bottom: .5em
+
+.company-name
+    text-transform: uppercase
+    font-size: 2em
+    font-weight: 600
+
+.company-position
+
+    font-size: 1.5em
+
+.company-dates, .company-location
+    font-size: 1.2em
+
+.company-experience
+
+    background-color: $secondary
+    flex-direction: column
+    padding-left: 2em !important
+    padding-right: 2em !important
+    text-align: center
+
+    +tablet-up
+
+        padding-left: 4em !important
+        padding-right: 4em !important
+        text-align: left
+
+    +desktop-up
+        flex-basis: 66.666666%
+
+    p
+        margin-bottom: 1em
+        color: $primary
+
+        &:last-child
+            margin-bottom: 0
+
+
+// Skills section
+.cv-skills
+    display: flex
+    flex-direction: column
+
+    +desktop-up
+        flex-direction: row
+
+        > div
+
+            flex-basis: 33.333333%
+
+.skillset
+
+    display: flex
+    flex-direction: column
+
+    h3
+        padding: 1.2em 0
+        background-color: $primary
+        color: $tertiary
+        font-size: 1.3em
+        text-align: center
+
+        +tablet-up
+            font-size: 1.7em
+
+    ul
+        background-color: #fff
+        color: $primary
+        padding: 4em 3em
+        flex-grow: 1
+
+        +tablet-up
+            padding: 4em
+
+        li
+
+            font-size: 1.1em
+            margin-bottom: .5em
+            list-style-type: disc
+
+            &:last-child
+                margin-bottom: 0
+
+    &.special
+
+        border-right: 1px solid $primary
+        border-left: 1px solid $primary
+
+        h3
+
+            background-color: $quarternary
+            color: #fff
+
+        p
+            background-color: darken($secondary, 10%)
