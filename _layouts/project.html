@@ -13,12 +13,11 @@
 
                     <h1> {{ page.title}} </h1>
 
-                    <h2> {{ page.subtitle }}</h2>
+                    <h2> {{ page.subtitle }}  </h2>
 
                 </div>
 
             </header>
-
 
             <section class="project-description">
 
@@ -53,13 +52,18 @@
                     <h3>Visit the site</h3>
 
                     <div>
+
+
+
                         <a href="{{page.repo_link}}" class="repo-link project-link">
                             See The Repo
                         </a>
 
+                        {% if page.site_link %}
                         <a href="{{page.site_link}}" class="site-link project-link">
                             Visit the site
                         </a>
+                        {% endif %}
                     </div>
 
                 </div>
