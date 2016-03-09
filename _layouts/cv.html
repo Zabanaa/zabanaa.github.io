@@ -11,7 +11,7 @@
                     <ul class="details-list">
                         <li class="name">Karim Cheurfi</li>
                         <li class="age">24 years old</li>
-                        <li class="location">Location: Brighton</li>
+                        <li class="location">Location: Brighton (Relocation OK)</li>
                         <li class="phone">Phone: <a href="tel:07548698753">07548698753</a></li>
                         <li class="skype">Skype: <a href="skype:karim.cheurfi1">karim.cheurfi1</a></li>
                         <li class="email">E-mail: <a href="mailto: karim.cheurfi@gmail.com">karim.cheurfi@gmail.com</a></li>
@@ -23,7 +23,9 @@
 
                     <article>
 
-                        <p>Lorem Khaled Ipsum is a major key to success. The key is to drink coconut, fresh coconut, trust me. Surround yourself with angels, positive energy, beautiful people, beautiful souls, clean heart, angel. It’s on you how you want to live your life. Everyone has a choice. I pick my choice, squeaky clean. They don’t want us to win. Don’t ever play yourself.</p>
+                        <p>I'm a self motivated Front-End developer with 10 months of agency experience and a strong interest in Back-End technologies (Python Django, NodeJS), looking for a position as a developer to utilise my current skills and knowledge and also help me further develop by Back-End skills working in commercial projects.</p>
+
+                        <p>My career goal is to become a solid full stack developer and contribute to the success of any project I work on.</p>
 
                     </article>
 
@@ -38,19 +40,18 @@
                 <div class="company-info">
 
                     <ul>
-                        <li class="company-name">Neptik LTD</li>
-                        <li class="company-position">Front End Developer</li>
-                        <li class="company-dates">January - April 2015</li>
-                        <li class="company-location">Brighton - North Laines</li>
+
+                        <li class="company-name">{{job.company_name}}</li>
+                        <li class="company-position">{{job.position}}</li>
+                        <li class="company-dates">{{job.dates}}</li>
+                        <li class="company-location">{{job.location}}</li>
+
                     </ul>
 
                 </div>
 
                 <article class="company-experience">
-
-                    <p>{{job.description_two}}</p>
-                    <p>{{job.description_two}}</p>
-
+                    <p>{{job.summary}}</p>
                 </article>
 
             </section>

@@ -1,33 +1,21 @@
 [
 
     {
-        "title": "Netptik",
+        "company_name": "Netptik",
+        "position": "Front End Intern",
+        "dates": "January - April 2015",
+        "location": "Brighton - North Laines",
+        "summary": "Working at Neptik was my first real experience at an agency. I joined as an intern through a European Program funded by the EU. At Neptik I worked in a team of 4 designers / developers. During my time there I was able to develop various wordpress sites, from design to deployment in autonomy. This experience taught me a lot about agency life, how to communicate with designers and clients as well as technical skills such as git and technologies like Vagrant and Grunt."
 
-        "description_one": "First experience at an agency as an intern. Right away I was trusted and given ownership of the projects I worked on. At neptik I worked in a team of 4 designers / developers. During my time there I was able to learn about how wordpress templating works. I was introduced to technologies like Vagrant and Grunt blablabla cool heheh",
-
-        "description_two": "I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his dribbble shots so I wanted to see if it was possible to pull that information dynamically.",
-
-        "description_three": "Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience",
-
-        "background-color": "#679895",
-        "button-color": "#5d8986",
-        "url": "http://zabana.bitballoon.com/"
 
     },
 
     {
-        "title": "Dribble Portfolio",
-
-        "description_one": "This is a project I started (and completed) with no other purpose than trying to learn to interact with 'real' apis. I had experience
-        making ajax calls but I really wanted to create something useful with a real practical application.",
-
-        "description_two": "I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his dribbble shots so I wanted to see if it was possible to pull that information dynamically.",
-
-        "description_three": "Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience",
-
-        "background-color": "#679895",
-        "button-color": "#5d8986",
-        "url": "http://zabana.bitballoon.com/"
-
+        "company_name": "Bozboz",
+        "position": "Front End Developer",
+        "dates": "April - Mid November 2015",
+        "location": "Hove - Brighton",
+        "summary": "I joined Bozboz a week after my internship ended at Neptik. I spent an amazing six months there. The company is bigger so the structure was different. Working there helped my significantly improve my communication skills with Account Managers and Digital Marketing executives. I learned to listen to their concerns on certain projects and clearly explain my thoughts and my tasks. On the technical side, I worked alongside incredibly talented developers who exposed me to Laravel, PHP, SSH and a host of other cool technologies."
     }
+
 ]
