@@ -1,22 +1,21 @@
 ---
 layout: project
-title: "Dribble Portfolio"
-subtitle: "A place to showcase someone's shots"
+title: "Cereal Notes"
+subtitle: "Taking notes using Python and Django"
 technologies:
-    - technology_name: Flexbox
-    - technology_name: Dribbble API
-    - technology_name: Google Maps API
     - technology_name: ES6 Promises
-    - technology_name: Promise.all()
+    - technology_name: Django
+    - technology_name: Ajax Form Submission
+    - technology_name: User Registration
+    - technology_name: User Login / out
 
-repo_link: "http://zabana.bitballoon.com/"
-site_link: "https://github.com/CerealCoder/dribbble-portfolio"
+repo_link: "https://github.com/CerealCoder/cereal-notes"
 ---
 
-This is a project I started (and completed) with no other purpose than trying to learn to interact with 'real' apis. I had experience making ajax calls but I really wanted to create something useful with a real practical application.
+After a million AJAX calls, I finally realised that I had a thing for Data Manipulation. That lead me to teach myself Python (after buying a Raspberry PI) and SQL. I immediately fell in love with Python and its beautiful syntax and I decided that it was time for me to pick a framework.
 
-I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his Dribbble shots so I wanted to see if it was possible to pull that information dynamically.
+The choice wasn't easy between Django and Flask, but I eventually picked Django mainly for the documentation that I find quite clear and straightforward. Cereal Notes is basically me Teaching myself all kinds of fun things related to the framework. I absolutely love it.
 
-Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience.
+Because of that, I was able to learn about data processing through forms and POST requests, how to filter data based on URL parameters, how to register / login-out users, HttpResponses, template context etc. I'm also trying to build a RESTful service for it. We'll see how it goes !
 
-In addition, I added a Google Map to the site for fun with a custom SVG marker. I styled the map using this wonderful app called [snazzymaps](https://snazzymaps.com/).
+The project is still in development, it will soon be deployed on heroku. In the meantime, you can check the progress by visiting the repo's page.

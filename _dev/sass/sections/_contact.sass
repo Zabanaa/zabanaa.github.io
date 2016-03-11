@@ -24,8 +24,12 @@
 
 .contact__cv
 
-    background-color: $primary
+    background-color: $quarternary
     flex-direction: column
+    color: $tertiary
+
+    &:hover svg
+        animation: wobble .8s ease-out both
 
     span
         display: block
@@ -39,7 +43,21 @@
             +size(100px)
 
         path
-            fill: $secondary
+            fill: $tertiary
 
 .contact__email
     background-color: $tertiary
+
+    span
+        color: $quarternary
+
+        &:after
+            content: ''
+            display: block
+            width: 0
+            height: 2px
+            background-color: $primary
+            transition: all .5s ease
+
+    &:hover span:after
+        width: 100%

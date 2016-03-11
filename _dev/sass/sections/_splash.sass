@@ -2,80 +2,81 @@
 
     height: 80vh
     display: flex
-    flex-direction: column
-
-    +desktop-up
-        flex-direction: row
-        height: 100vh
-
-    +large-desktop
-        height: 95vh
-
-.splash__sub-section
-    flex-basis: 50%
-    display: flex
     align-items: center
     justify-content: center
-    flex-direction: column
+    background-image: url('/assets/img/code.jpg')
     background-position: 50% 50%
     background-repeat: no-repeat
     background-size: cover
     position: relative
 
-    &:hover svg
-
-        +desktop-up
-
-            animation: pulseScale 1s ease-out both infinite
-
     &:after
-        +position(absolute, 0 0 0 0)
         content: ''
         display: block
+        +position(absolute, 0 0 0 0)
+        background-color: fade-out($primary, .05)
 
-    svg
-        +size(75px)
-        z-index: 3
+    +desktop-up
+        height: 100vh
 
-        +tablet-up
-            +size(150px)
+    +large-desktop
+        height: 95vh
+
+    .logo, header
+
+        z-index: 2
+        color: $tertiary
+        text-align: center
+
+    .logo
 
 
-.splash__title
+        position: absolute
+        top: 1em
+        left: 1em
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: 1.5em
+        display: none
 
-    position: relative
-    z-index: 2
-    font-size: 1.3em
-    text-transform: uppercase
-    letter-spacing: .09em
-    text-align: center
-    margin-bottom: 1.3rem
-    +tablet-up
-        font-size: 3em
-        margin-bottom: 3rem
+        +desktop-up
+            display: flex
 
-.cereals
-    background-image: url('/assets/img/cereal.jpg')
+        svg
+            +size(100px)
+            animation: pulseScale 1.3s ease both infinite
 
-    &:after
-        background-color: fade-out($splash-cereals-bg, .15)
+            path, circle
+                fill: $tertiary
 
-    .splash__title
-        color: $splash-code-bg
+    header
+        position: relative
 
-    svg
-        path, circle
-            fill: $splash-code-bg
+        padding: 2em
 
-.code
-    background-image: url('/assets/img/code.jpg')
+        +desktop-up
+            padding: 0
 
-    &:after
-        background-color: fade-out($splash-code-bg, .15)
+        h1, h2
+            animation: fadeInUp 1s ease both
 
-    .splash__title
-        color: $splash-cereals-bg
+        h1
+            font-size: 1.4em
+            margin-bottom: 2rem
 
-    svg
-        path
-            fill: $splash-cereals-bg
+            +tablet-up
+                font-size: 2.8em
+
+            +desktop-up
+                font-size: 3.3em
+
+        h2
+            font-size: 1.2em
+            animation-delay: .2s
+
+            +tablet-up
+                font-size: 1.8em
+
+            +desktop-up
+                font-size: 2.3em

@@ -1,33 +1,26 @@
 .portfolio
     text-align: center
+    background-color: darken($secondary, 1%)
 
-.portfolio__project
+    .section-header
+        color: $primary
+
+.portfolio .container
 
     display: flex
-    flex-direction: column
-    border-top: 1px solid darken(#F5F5F5, 21%)
-    height: auto
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 77em
+    margin: 2em auto 0
+    padding: 0 1em
 
-    +mobile
-
-        &:nth-child(2),
-        &:nth-child(3),
-            display: none
+    +tablet-up
+        padding: 0 3em
 
     +desktop-up
-        flex-direction: row
-        height: 400px
+        padding: 0
+        margin: 4em auto 0
 
-        &:nth-child(2n) .project__name
-            order: 2
-
-    &:nth-child(2) .project__name a
-
-        color: rgba(1,1,1, 0.7)
-
-    &:nth-child(5) .project__name a
-
-        color: #21364b
 
 .project__name
 
@@ -35,28 +28,75 @@
     flex-direction: column
     align-items: center
     justify-content: center
-    flex-grow: 1
-    color: $secondary
-    position: relative
-    padding: 3em 0
+    flex-basis: 100%
+    background-color: $quarternary
+    color: $tertiary
+    padding: 4em 0
+    margin-bottom: 2em
+    transition: all .23s ease
+    box-shadow: none
 
+    +tablet-up
+        flex-basis: 48%
+        padding: 5em 0
 
     +desktop-up
-        padding: 0
+        flex-basis: 32%
+        padding: 6em 0
 
+        &:hover
+
+            +desktop-up
+
+                box-shadow: 0 0 12px $primary
+
+    &:nth-child(2n)
+        background-color: $tertiary
+        color: $quarternary
+
+        &:hover
+            +desktop-up
+                box-shadow: 0 0 12px $quarternary
+
+        a
+            background-color: $quarternary
+            color: $tertiary
+
+            &:hover
+
+                +desktop-up
+
+                    background-color: transparent
+                    color: $quarternary
+                    box-shadow: 0 0 9px $quarternary
 
     h2
-        font-size: 2.3em
+        font-size: 2em
         margin-bottom: 1em
+
+        +desktop-up
+            font-size: 2.3em
 
     a
         font-size: 1.3em
-        padding: .5em 1em
-        box-shadow: none
+        padding: .3em 1.6em
         transition: all .23s ease
+        background-color: $tertiary
+        color: $primary
+        border-radius: 44px
+        box-shadow: none
+
+        +tablet-up
+            padding: .5em 2em
 
         &:hover
-            box-shadow: 0px 0px 3px $secondary
+
+            +desktop-up
+
+                background-color: transparent
+                color: $tertiary
+                box-shadow: 0 0 9px $tertiary
+
 
 .project__description
 

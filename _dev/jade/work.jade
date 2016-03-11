@@ -1,19 +1,15 @@
-section.portfolio.no-padding
+section.portfolio
 
-    |{% for project in site.data.work %}
+    h2.section-header Some Projects
     
-    div.portfolio__project
+    div.container
         
-        div.project__name(style="background-color: {{project.background-color}}")
+        |{% for project in site.data.work %}
+            
+        div.project__name
             
             h2 {{project.title}}
-            a(href="{{project.url}}", style="background-color: {{project.button-color}}") View site
-            
-        article.project__description
-        
-            p {{project.description_one}}
-            p {{project.description_two}}
-            p {{project.description_three}}
-        
-    |{% endfor %}
+            a(href="{{project.url}}") View site
+                
+        |{% endfor %}
     

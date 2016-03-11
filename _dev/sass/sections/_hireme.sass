@@ -1,6 +1,16 @@
 .hire-me
-    background-color: $splash-code-bg
-    color: $secondary
+    background-color: darken($secondary, 6%)
+    color: $primary
+
+    .container
+        display: flex
+        align-items: center
+        flex-direction: column
+        max-width: 77em
+        margin: 0 auto
+
+        +desktop-up
+            flex-direction: row
 
 .hire-me__blurb
 
@@ -25,3 +35,23 @@
 
         a
             text-decoration: underline
+
+.hire-me__picture
+
+    overflow: hidden
+    border-radius: 50%
+    background-image: url('/assets/img/me2.jpg')
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    filter: sepia(49%)
+    +size(130px)
+    margin: 0 auto 2em
+    box-shadow: 0 0 4px darken(#F5F5F5, 87% )
+
+    +tablet-up
+        +size(170px)
+
+    +desktop-up
+        margin-bottom: 0
+        +size(200px)

@@ -12,10 +12,10 @@ technologies:
 repo_link: "https://github.com/CerealCoder/Milky"
 ---
 
-This is a project I started (and completed) with no other purpose than trying to learn to interact with 'real' apis. I had experience making ajax calls but I really wanted to create something useful with a real practical application.
+Milky is essentially my version of the HTML5 boilerplate. I created it because I realised that I was spending too much time setting up projects and not enough time actually working on them.
 
-I was inspired to pursue this project after watching a youtube series where the host designs and codes his new portfolio site from scratch. I noticed that he hard-coded links to his Dribbble shots so I wanted to see if it was possible to pull that information dynamically.
+It started as a very simple front end starter kit with HTML5, SASS (indented syntax, Bourbon and Neat) and Javascript. I added Gulp as a build tool to compile my SASS and minify my Javascript Code. In addition, I incorporated Browser-Sync for live reloading (and to have a basic web server).
 
-Working on this portfolio site pushed me to learn about Promises in ES6, the Promise.all method, It even taught me a little bit about oAuth and how to set headers to authenticate requests. All in all It was a really fun learning experience.
+Milky evolved as my needs started to change. I adopted the ES6 standard so I needed a way to modularise my code and for that I chose browserify and babel. I also integrated Jade, Handlebars and React into the mix. It's very lightweight and will probably continue to change with my future needs.
 
-In addition, I added a Google Map to the site for fun with a custom SVG marker. I styled the map using this wonderful app called [snazzymaps](https://snazzymaps.com/).
+I encourage you to check it out and contribute to it if you find it useful !
