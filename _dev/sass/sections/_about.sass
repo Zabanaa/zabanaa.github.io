@@ -23,13 +23,22 @@
     max-width: 67em
     margin: 0 auto
 
+    &.animate p
+        opacity: 1
+        animation: fadeInUp 1s ease-out both
 
+        @for $i from 1 through 8
+            &:nth-child(#{$i})
+                animation-delay: .2s * $i
 
     p
         margin-bottom: 1em
         line-height: 1.54
         text-shadow: 0 0 1px lighten($text, 56%)
         text-align: center
+        opacity: 0
+
+
 
         &:last-child
             margin-bottom: 0

@@ -1,5 +1,5 @@
 // project header
-.project-header
+.project__header
     background-color: $primary
     height: 65vh
     color: white
@@ -8,6 +8,7 @@
     justify-content: center
     text-align: center
     padding: 0 2em
+    position: relative
 
     +tablet-up
         padding: 0
@@ -15,7 +16,28 @@
     +desktop-up
         height: 80vh
 
-.project-titles
+.project__back-btn
+
+    position: absolute
+    top: 2em
+    left: 2em
+    display: none
+
+    &:hover
+
+        +desktop-up
+            animation: wobble .76s ease-out both
+
+    +tablet-up
+        display: block
+
+    svg
+        +size(50px)
+
+        path
+            fill: $tertiary
+
+.project__titles
 
     h1
         font-size: 1.5em
@@ -40,7 +62,7 @@
     h2
         animation-delay: .23s
 
-.project-description
+.project__description
 
     background-color: darken($secondary, 1%)
     padding: 2em !important
@@ -69,9 +91,8 @@
             font-size: 1.4em
             line-height: 1.84
 
-.project-info
+.project__info
 
-    background-color: mediumseagreen
     display: flex
     flex-direction: column
 
@@ -95,7 +116,7 @@
                 font-size: 2.2em
                 margin-bottom: 2rem
 
-.project-technologies
+.project__technologies
 
     background-color: $quarternary
     color: $tertiary
@@ -112,7 +133,7 @@
             font-size: 1.2em
             list-style-type: disc
 
-.project-links
+.project__links
 
     background-color: $tertiary
     color: $primary
@@ -124,7 +145,7 @@
         +desktop-up
             margin-top: 4em
 
-.project-link
+.project__link
 
     padding: .7em 1.6em
     font-size: 1.2em

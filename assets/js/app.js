@@ -1,1 +1,1 @@
-"use strict";var message="this is es6 bitch";console.log(message);
+"use strict";var showElements=function(){var o=window.scrollY,e=window.innerHeight,n=Array.from(document.querySelectorAll(".animated-section"));n.forEach(function(n){var s=n.offsetTop;o>s-e/1.3&&(n.childNodes.forEach(function(o){o.classList.add("animate")}),console.log(n.childNodes))})};window.addEventListener("scroll",showElements);

@@ -12,6 +12,9 @@
             margin-bottom: 1em
 
     p
+        &.animate
+            animation: fadeInUp 1s 1.3s ease both
+
         +tablet-up
             font-size: 1.3em
 
@@ -29,21 +32,29 @@
     justify-content: space-between
     flex-direction: column
 
+    &.animate li
+        opacity: 1
+        animation: fadeInUp 1s ease-out both
 
-    li:nth-child(1),
-    li:nth-child(6)
-        display: none
+        @for $i from 1 through 8
+            &:nth-child(#{$i})
+                animation-delay: .2s * $i
 
+    li
+        opacity: 0
+
+        &:nth-child(1),
+        &:nth-child(6)
+            display: none
+
+            +desktop-up
+                display: block
 
     +tablet-up
         flex-direction: row
         flex-wrap: wrap
         padding: 2em 3em
 
-    +desktop-up
-        li:nth-child(1),
-        li:nth-child(6)
-            display: block
 
     svg
 

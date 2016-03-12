@@ -14,6 +14,14 @@
     margin: 2em auto 0
     padding: 0 1em
 
+    &.animate .project__name
+        opacity: 1
+        animation: fadeInUp 1s ease-out both
+
+        @for $i from 1 through 8
+            &:nth-child(#{$i})
+                animation-delay: .2s * $i
+
     +tablet-up
         padding: 0 3em
 
@@ -35,6 +43,7 @@
     margin-bottom: 2em
     transition: all .23s ease
     box-shadow: none
+    opacity: 0
 
     +tablet-up
         flex-basis: 48%
