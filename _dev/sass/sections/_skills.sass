@@ -41,7 +41,9 @@
                 animation-delay: .2s * $i
 
     li
-        opacity: 0
+
+        +desktop-up
+            opacity: 0
 
         &:nth-child(1),
         &:nth-child(6)
