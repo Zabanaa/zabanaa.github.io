@@ -1,21 +1,32 @@
 ---
 layout: project
-title: "Smoothie"
-subtitle: "Smooth animations for your web projects"
+title: "Grab A Cup"
+subtitle: "Find the nearest coffee shops in your area"
 technologies:
-    - technology_name: SASS
-    - technology_name: CSS3 Animations
+    - technology_name: Angular JS
+    - technology_name: Google Maps API
+    - technology_name: Google Maps Geocoding
+    - technology_name: Foursquare API
+    - technology_name: Open Weather Map API
 
 repo_link: "https://github.com/MilkshakePanda/grab-a-cup"
 site_link: "http://milkshakepanda.github.io/grab-a-cup/"
 ---
 
-<p>Smoothie was created because I wanted to challenge myself and see If I could write an entire library on my own.</p>
+<p>Grab A Cup is an Angular 1.x web application that I've built after teaching myself the framework.</p>
 
-<p>I wrote it when I was at Neptik and is entirely written in Sass (indented syntax, not Scss).</p>
+<p>I didn't really want to create yet another todo application so I decided to go with something a bit more original.</p>
 
-<p>It's also not prefixed because at the time I assumed everyone was using some sort of autoprefixer.</p>
+<p>The concept behind the app is very simple: The user enters their location, and after they've chosen a radius and a number of venues, the application returns a map with a list of nearby coffee shops along with useful weather information.</p>
 
-<p>I still use it to this day but I haven't really added much to it as I focused more on Javascript, Node and Python.</p>
+<p>Behind the scenes, the applications makes use of the Google Maps Geocoding API to return latitude and longitude data from the location the user entered, passes that information on to the open weather map API to get the temperatures.</p>
 
-<p>Again, it's open source so If you want to contribute to it, you're more than welcome !</p>
+<p>Then, using those same coordinates, a call to foursquare's API is made to return the list of venues. A map is also instantiated and markers for each venue are placed on the map using the coordinates returned by the foursquare API.</p>
+
+<p>I still have to make it responsive (though the priority for me in this case was to focus on the logic and not the styling)</p>
+
+<p>I will also add Angular JS form validation and a way for the users to use their exact location using the native javascript geolocation API.</p>
+
+<p>If you stumble across this project and want to contribute, please don't hesitate to initiate a PR, I always love to collaborate and learn from more experienced / talented developers to learn new tricks and techniques.</p>
+
+<p>Thanks !</p>
