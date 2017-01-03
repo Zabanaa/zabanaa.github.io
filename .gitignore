@@ -1,4 +1,6 @@
 _site
+*.swp
+*.swo
 .idea
 portfolio.md
 node_modules
