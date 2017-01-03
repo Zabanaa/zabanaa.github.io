@@ -1,15 +1,17 @@
-section.portfolio.animated-section
+section.projects
 
-    h2.section-header#no-anim Some Projects
-    
-    div.container
-        
-        |{% for project in site.data.work %}
-            
-        div.project__name
-            
-            h2 {{project.title}}
-            a(href="{{project.url}}") View Project
-                
-        |{% endfor %}
-    
+    h2.section-heading ubuntu@zabana:~$ cat projects.md
+
+    ul
+        li
+            a(href="https://www.npmjs.com/package/nuddles") Nuddles - Node.js wrapper for the Foursquare API
+        li
+            a(href="https://github.com/Zabanaa/jabbbar") Jabbbar - Python 3 wrapper for the Dribbble API
+
+        li
+            a(href="https://wintermute.design") Wintermute - A RESTful API for browsing Cyberpunk Authors/Novels/Characters
+        li
+            a(href="https://github.com/Zabanaa/slashme") Slash Me - My personal API (Powered by Flask)
+
+        li
+            a(href="https://zabana.io/blog") Notes - My blog
