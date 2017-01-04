@@ -12,18 +12,21 @@ body
 
 main
     max-width: 66em
-    margin: 0 auto
-
+    padding-left: 3em
 section
     padding-top: 3em
 
 section .section-heading
 
-    font-size: 2em
+    font-size: 1.8em
     margin-bottom: 1em
 
     span:first-child
-        color: hotpink
+        color: lightyellow
+        background: blue
+
+        &+span
+            color: hotpink
 
 section h3
     font-size: 1.5em
@@ -36,7 +39,7 @@ section ul
     padding-left: 2em
 
     li
-        margin-bottom: 1em
+        margin-bottom: .7em
 
         &:before
             content: "- "
