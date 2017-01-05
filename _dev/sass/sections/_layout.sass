@@ -23,8 +23,15 @@ body
 main
     max-width: 66em
     padding-left: 3em
+
+    +mobile
+        padding: 0 1em
+
 section
     padding-top: 3em
+
+    +mobile
+        padding-top: 1em
 
 section .section-heading
 
@@ -38,9 +45,15 @@ section .section-heading
         &+span
             color: hotpink
 
+    +mobile
+        font-size: 1.4em
+
 section h3
     font-size: 1.5em
     margin-bottom: 1em
+
+    +mobile
+        font-size: 1.3em
 
     &.languages
         color: $light-blue
@@ -69,16 +82,24 @@ section ul
     list-style: none
     padding-left: 2em
 
+    +mobile
+        padding-left: 1em
+
     li
         margin-bottom: .7em
 
         &:before
             content: "- "
+
 section p
 
     font-size: 1.2em
     margin-bottom: 1em
     line-height: 1.2
+
+    +mobile
+        font-size: 1em
+        line-height: 1.4
 
     &:last-child
         margin-bottom: 0
