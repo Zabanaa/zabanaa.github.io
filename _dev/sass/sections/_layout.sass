@@ -4,6 +4,16 @@
 
 h1, h2, h3, h4, h5, h6
     font-family: "Anonymous Pro", monospace
+a
+    color: inherit
+    transition: .2s ease
+    outline: 0
+
+    &.about a
+        color: hotpink
+
+    &:hover
+        color: blue
 
 body
     background: $purple
@@ -31,6 +41,27 @@ section .section-heading
 section h3
     font-size: 1.5em
     margin-bottom: 1em
+
+    &.languages
+        color: $light-blue
+
+    &.tools
+        color: $pink
+
+    &.frameworks
+        color: $yellow
+
+    &.other
+        color: $blue
+
+    &.projects__heading
+        color: $light-blue
+
+    &.jobs__heading
+        color: $orange
+
+    &.contact__heading
+        color: $green
 
 section ul
 
