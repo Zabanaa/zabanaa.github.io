@@ -1,0 +1,107 @@
+.post
+    max-width: 60em
+
+.post__body__header
+
+    padding: 2em 0
+
+    h2
+      font-size: 3em
+      display: inline-block
+      background: blue
+
+      +mobile
+        font-size: 1.7em
+        display: block
+        margin-bottom: 1em
+
+    time
+        margin-left: 1em
+        font-size: 1.3em
+        background: hotpink
+
+        +mobile
+            margin-left: 0
+
+.post__body__content
+
+    h1, h2, h3, h4
+        margin: 1rem 0
+
+    h1
+        font-size: 2.7em
+
+        +mobile
+            font-size: 2em
+
+        &:before
+            content: "# "
+
+    h2
+        font-size: 2.1em
+
+        +mobile
+            font-size: 1.7em
+
+        &:before
+            content: "## "
+
+    h3
+        font-size: 1.4em
+
+        &:before
+            content: "### "
+
+    h4
+        font-size: 1.2em
+
+        &:before
+            content: "#### "
+
+.post__body__content p
+
+    line-height: 1.3
+    margin-top: 1em
+
+    > code
+
+        background: darkgray
+        color: black
+
+.post__body__content a
+
+    background: blue
+    color: lightyellow
+
+    &:hover
+        background: hotpink
+
+.post__body__content img
+
+    max-width: 100%
+    width: 100%
+    height: auto
+    display: inline-block
+
+.post__body__content blockquote
+
+    // background: dodgerblue
+    border-left: 5px solid $light-blue
+    padding-left: 1.5em
+    color: $light-blue
+
+    p
+        text-decoration: underline
+
+.post__body__content div[class*=language-]
+
+    margin-bottom: 1em
+
+    .highlight
+        padding: 1em
+        font-size: 1.3em
+
+    +mobile
+        .highlight
+            font-size: 1.1em
+            overflow-x: scroll

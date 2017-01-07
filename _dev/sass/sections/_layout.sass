@@ -3,7 +3,7 @@
     margin: 0
 
 h1, h2, h3, h4, h5, h6
-    font-family: "Anonymous Pro", monospace
+    font-family: $headings
 a
     color: inherit
     transition: .2s ease
@@ -38,7 +38,7 @@ section
     +mobile
         padding-top: 1em
 
-section .section-heading
+.section-heading
 
     font-size: 1.8em
     margin-bottom: 1em
@@ -51,14 +51,14 @@ section .section-heading
             color: hotpink
 
     +mobile
-        font-size: 1.4em
+        font-size: 1.2em
 
 section h3
     font-size: 1.5em
     margin-bottom: 1em
 
     +mobile
-        font-size: 1.3em
+        font-size: 1.2em
 
     &.languages
         color: $light-blue
@@ -81,22 +81,29 @@ section h3
     &.contact__heading
         color: $green
 
-section ul
+ul, ol
 
     font-size: 1.1em
-    list-style: none
     padding-left: 2em
 
     +mobile
         padding-left: 1em
-
     li
         margin-bottom: .7em
 
-        &:before
-            content: "- "
+ol
+    padding-left: 4em
 
-section p
+    +mobile
+        padding-left: 2em
+
+ul > li
+    list-style: none
+
+    &:before
+        content: "- "
+
+p
 
     font-size: 1.2em
     margin-bottom: 1em
