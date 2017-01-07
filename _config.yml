@@ -4,3 +4,4 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 kramdown:
     input: GFM
     syntax_highlighter: rouge
+permalink: pretty
