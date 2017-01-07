@@ -6,15 +6,26 @@ layout: default
 
     {% include header.html %}
 
-    <ul class="notes__list">
-        {% for post in site.posts %}
+    <section class="notes">
 
-        <a href="{{post.url}}">
-            <h1> $ - {{post.title}}</h1>
-        </a>
+        <h2 class="section-heading">
+            <span>ubuntu@zabana:~$</span>
+            <span>My Notes</span>
+        </h2>
 
-        {% endfor %}
-    </ul>
+        <ul class="notes__list">
+
+            {% for post in site.posts %}
+
+            <li>
+                <a href="{{post.url}}"> <h1> # - {{post.title}}</h1> </a>
+                <time> {{post.date | date_to_string}}</time>
+            </li>
+            {% endfor %}
+
+        </ul>
+
+    </section>
 
     {% include footer.html %}
 
