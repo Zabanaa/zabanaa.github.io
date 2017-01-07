@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<main>
+
+    {% include header.html %}
+
+    <ul class="notes__list">
+        {% for post in site.posts %}
+
+        <a href="{{post.url}}">
+            <h1> $ - {{post.title}}</h1>
+        </a>
+
+        {% endfor %}
+    </ul>
+
+    {% include footer.html %}
+
+</main>
