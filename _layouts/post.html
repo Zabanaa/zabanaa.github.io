@@ -8,7 +8,7 @@ layout: default
 
         <div class="post__body__header">
             <h2>{{ page.title }}</h2>
-            <time>Published on: {{ page.date | date_to_string }}</time>
+            <time><span>Published on: {{ page.date | date_to_string }}</span></time>
         </div>
 
         <div class="post__body__content">
@@ -29,14 +29,13 @@ layout: default
             <ul>
                 {% if page.previous.url %}
                     <li>
-                        <a class="post__navigation__prev" href="{{page.previous.url}}.html">Prev: {{ page.previous.title }}</a>
-
+                        Prev: <a class="post__navigation__prev" href="{{page.previous.url}}.html">{{ page.previous.title }}</a>
                     </li>
                 {% endif%}
 
             {% if page.next.url %}
             <li>
-                <a class="post__navigation__next" href="{{page.next.url}}.html">Next: {{ page.next.title }}</a>
+                Next: <a class="post__navigation__next" href="{{page.next.url}}.html">{{ page.next.title }}</a>
             </li>
             {% endif%}
 

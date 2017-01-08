@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blogging like a Hacker
+title: Setting up Flask on Amazon
 ---
 
 `python setup.py`
