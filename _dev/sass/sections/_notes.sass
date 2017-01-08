@@ -5,18 +5,25 @@
 
     margin-bottom: 1em
 
+    +mobile
+        margin-bottom: 1.4em
+
     &:before
         content: ""
 
 
 .notes__list li a
 
-    font-size: 1.4em
     text-decoration: none
 
-    h1
+    h2
+        font-size: 1.4em
         margin-bottom: 10px
         display: inline-block
+
+        +mobile
+            display: block
+            font-size: 1.2em
 
 .notes__list time
     font-size: 1em

@@ -1,5 +1,10 @@
+// main
 .post
     max-width: 60em
+
+// article
+.post__body
+    margin-bottom: 2em
 
 .post__body__header
 
@@ -85,7 +90,6 @@
 
 .post__body__content blockquote
 
-    // background: dodgerblue
     border-left: 5px solid $light-blue
     padding-left: 1.5em
     color: $light-blue
@@ -105,3 +109,17 @@
         .highlight
             font-size: 1.1em
             overflow-x: scroll
+
+// Footer section
+.post__navigation
+    padding-top: 0
+
+.post__navigation__links
+
+    ul
+        padding-left: 0
+
+        li
+            &:before
+                content: ""
+

@@ -17,4 +17,33 @@ layout: default
 
     </article>
 
+    <section class="post__navigation">
+
+        <h2 class="section-heading">
+            <span>ubuntu@zabana:~$</span>
+            <span>ls otherposts/</span>
+        </h2>
+
+        <div class="post__navigation__links">
+
+            <ul>
+                {% if page.previous.url %}
+                    <li>
+                        <a class="post__navigation__prev" href="{{page.previous.url}}.html">Prev: {{ page.previous.title }}</a>
+
+                    </li>
+                {% endif%}
+
+            {% if page.next.url %}
+            <li>
+                <a class="post__navigation__next" href="{{page.next.url}}.html">Next: {{ page.next.title }}</a>
+            </li>
+            {% endif%}
+
+
+            </ul>
+        </div>
+
+    </section>
+
 </main>
