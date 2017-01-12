@@ -1,62 +1,56 @@
 section.skills
 
     h2.section-heading
-        span ubuntu@zabana:~$
+        span zabana@karimc:~$
         span  cat skills.md
 
     div.container
+
         div.skill-group
+
             h3.languages ## Languages
 
             ul
-                li Python
-                li Node.js
-                li Javascript (Front-end) / ES6
-                li HTML5
-                li CSS3
-                li Sass
-                li Golang (Basic)
-                li SQL (Postgres, MySQL)
-                li Markdown
+                | {% for language in site.data.skills.languages %}
+
+                li
+                    span  {{ language }}
+
+                | {% endfor %}
 
         div.skill-group
 
             h3.tools ## Tools
 
             ul
-                li Vim / VS Code
-                li Tmux
-                li Fish Shell
-                li Virtualbox
-                li Vagrant
-                li Docker
-                li Gulp
-                li Sequelize
-                li Trello
+                | {% for tool in site.data.skills.tools %}
+
+                li
+                    span  {{ tool }}
+
+                | {% endfor %}
+
 
         div.skill-group
 
             h3.frameworks ## Frameworks
 
             ul
-                li Express JS
-                li Django
-                li Flask
-                li Angular JS (1.x)
-                li Vue JS (Basic)
-                li Mocha / Chai
-                li Bourbon / Neat
+                | {% for framework in site.data.skills.frameworks %}
 
+                li
+                    span  {{ framework }}
+
+                | {% endfor %}
 
         div.skill-group
 
             h3.other ## Other
 
             ul
-                li HTTP / REST / OAuth2 / API Development
-                li CSS Animations / Flexbox / BEM
-                li Git / Testing / Continuous Integration
-                li Basic UNIX server administration
-                li OOP
-                li Nginx / SSL
-                li AWS
+                | {% for thing in site.data.skills.other %}
+
+                li
+                    span  {{ thing }}
+
+                | {% endfor %}

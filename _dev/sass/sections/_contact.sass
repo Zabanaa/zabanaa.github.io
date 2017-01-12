@@ -1,14 +1,15 @@
 .contact p
 
-    color: blueviolet
-    margin-top: 1.6em
     font-size: 1.3em
+
+    span
+        color: $orange
+
+        &:before, &:after
+            content: "**"
+
+    a
+        color: $light-blue
 
     +mobile
         font-size: 1.2em
-
-    &:before
-      content: "<!--"
-
-    &:after
-      content: "-->"

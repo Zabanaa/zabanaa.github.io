@@ -1,21 +1,15 @@
 section.projects
 
     h2.section-heading
-        span ubuntu@zabana:~$
+        span zabana@karimc:~$
         span  ls projects/
 
-    h3.projects__heading ## What I Hack On
-
     ul
-        li
-            a(href="https://www.npmjs.com/package/nuddles") Nuddles - Node.js wrapper for the Foursquare API
-        li
-            a(href="https://github.com/Zabanaa/jabbbar") Jabbbar - Python 3 wrapper for the Dribbble API
+
+        | {% for project in site.data.projects.projects %}
 
         li
-            a(href="https://wintermute.design") Wintermute - A RESTful API for browsing Cyberpunk Authors/Novels/Characters
-        li
-            a(href="https://github.com/Zabanaa/slashme") Slash Me - My personal API (Powered by Flask)
+            a(href="{{project.url}}") {{ project.name }}
+            span  {{ project.desc }}
 
-        li
-            a(href="{{site.url}}/notes") Notes - My blog
+        | {% endfor %}
