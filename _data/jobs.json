@@ -1,0 +1,29 @@
+{
+
+    "jobs": [
+
+        {
+            "year": "2016 / Present",
+            "title": "Freelance Django Developer",
+            "company": "SuperTesteur",
+            "url": "http://super-testeur.fr",
+            "location": "Paris, France"
+        },
+
+        {
+           "year": "2015",
+            "title": "Front End Developer",
+            "company": "Bozboz",
+            "url": "https://www.bozboz.co.uk",
+            "location": "Brighton, UK"
+        },
+
+        {
+            "year": "2015",
+            "title": "Front End Developer",
+            "company": "Neptik",
+            "url": "https://neptik.com",
+            "location": "Brighton, UK"
+        }
+    ]
+}
