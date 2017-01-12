@@ -12,7 +12,7 @@ permalink: /notes/
     <section class="notes">
 
         <h2 class="section-heading">
-            <span>ubuntu@zabana:~$</span>
+            <span>zabana@karimc:~$</span>
             <span>My Notes</span>
         </h2>
 
@@ -21,7 +21,7 @@ permalink: /notes/
             {% for post in site.posts %}
 
             <li>
-                <a href="{{post.url}}.html"> <h2> # - {{post.title}}</h2> </a>
+                <a href="{{post.url}}.html"><h2> # {{post.title}}</h2></a>
                 <time> {{post.date | date_to_string}}</time>
             </li>
             {% endfor %}

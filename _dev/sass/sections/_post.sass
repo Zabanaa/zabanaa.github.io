@@ -1,6 +1,7 @@
 // main
 .post
     max-width: 60em
+    margin-top: -2em
 
 // article
 .post__body
@@ -13,7 +14,6 @@
     h2
       font-size: 3em
       display: inline-block
-      background: blue
       margin-bottom: 1rem
 
       +mobile
@@ -24,7 +24,8 @@
 
         span
           font-size: 1.3em
-          background: hotpink
+          color: hotpink
+          text-decoration: underline
 
 .post__body__content
 
@@ -73,11 +74,7 @@
 
 .post__body__content a
 
-    background: blue
-    color: lightyellow
-
-    &:hover
-        background: hotpink
+    color: $pink
 
 .post__body__content img
 
@@ -108,6 +105,14 @@
             font-size: 1.1em
             overflow-x: scroll
 
+.post__body__content ul > li
+
+    color: inherit
+
+    &:before
+        content: "* "
+        color: $pink
+
 // Footer section
 .post__navigation
     padding-top: 0
@@ -118,6 +123,11 @@
         padding-left: 0
 
         li
+            color: inherit
+
+            a:hover
+                color: $pink
+
+
             &:before
                 content: ""
-

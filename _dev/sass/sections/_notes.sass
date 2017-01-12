@@ -4,6 +4,7 @@
 .notes__list li
 
     margin-bottom: 1em
+    color: lightyellow
 
     +mobile
         margin-bottom: 1.4em
@@ -15,13 +16,19 @@
 .notes__list li a
 
     text-decoration: none
+    display: inline-block
+    padding-bottom: 1px
+    margin-bottom: 10px
+    border-bottom: 2px dotted transparent
+    transition: .2s ease
+
+    &:before, &:after
+        display: none
 
     &:hover
-        color: $light-blue
-
+        border-color: $brown
     h2
         font-size: 1.4em
-        margin-bottom: 10px
         display: inline-block
 
         +mobile
@@ -30,4 +37,5 @@
 
 .notes__list time
     font-size: 1em
-    padding-left: 1em
+    padding-left: .5em
+    color: $pink
