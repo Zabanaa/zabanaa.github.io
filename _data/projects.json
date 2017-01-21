@@ -2,11 +2,35 @@
 
     "projects": [
 
-        {"url": "https://www.npmjs.com/package/nuddles", "name": "Nuddles", "desc": "Node.js wrapper for the Foursquare API"},
-        {"url": "https://github.com/Zabanaa/jabbbar",  "name": "Jabbar", "desc": "Python 3 wrapper for the Dribbble API"},
-        {"url": "https://wintermute.design/", "name": "Wintermute", "desc": "A RESTful API for browsing Cyberpunk Authors/Novels/Characters"},
-        {"url": "https://github.com/Zabanaa/slashme", "name": "SlashMe", "desc": "My personal API developed in Flask"},
-        {"url": "/notes", "name": "Notes", "desc": "Just my blog"}
+        {
+            "url": "https://www.npmjs.com/package/nuddles",
+            "name": "Nuddles",
+            "desc": "Node.js wrapper for the Foursquare API"
+        },
+
+        {
+            "url": "https://github.com/Zabanaa/jabbbar",
+            "name": "Jabbbar",
+            "desc": "Python 3 wrapper for the Dribbble API"
+        },
+
+        {
+            "url": "https://wintermute.design/",
+            "name": "Wintermute",
+            "desc": "A RESTful API for browsing Cyberpunk Authors/Novels/Characters"
+        },
+
+        {
+            "url": "https://github.com/Zabanaa/done",
+            "name": "Done",
+            "desc": "(Actually) Get Shit Done"
+        },
+
+        {
+            "url": "/notes",
+            "name": "Notes",
+            "desc": "Just my blog"
+        }
 
     ]
 
