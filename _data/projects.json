@@ -23,7 +23,13 @@
         {
             "url": "https://github.com/Zabanaa/tings",
             "name": "Tings.co",
-            "desc": "We've all got tings to do"
+            "desc": "Flask x Vue PM tool for personal projects. (Will be out soon)"
+        },
+
+        {
+            "url": "https://github.com/Zabanaa/night-city",
+            "name": "Night-City",
+            "desc": "The Ansible playbook I made to provision my development boxes"
         },
 
         {

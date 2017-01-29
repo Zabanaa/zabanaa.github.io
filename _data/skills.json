@@ -1,9 +1,9 @@
 {
 
     "languages": ["Python", "Node.js", "Javascript (Front-End) / ES6", "HTML5", "CSS3",
-        "Sass", "Golang (Basic)", "SQL", "Markdown"
+        "Sass", "C (Currently Learning)", "SQL", "Markdown"
     ],
     "tools": [ "Vim / VS Code", "Tmux", "Fish Shell", "Virtualbox", "Vagrant", "Docker", "Ansible", "Gulp"],
-    "frameworks": ["Express JS", "Django", "Flask", "Angular JS (1.x)", "Vue.js (Basic)", "Mocha / Chai", "Bourbon / Neat"],
+    "frameworks": ["Express JS", "Django", "Flask", "Angular JS (1.x)", "Vue.js", "Mocha / Chai", "Bourbon / Neat"],
     "other": ["HTTP / REST / OAuth2 / API Development", "CSS Animations / Flexbox / BEM", "Git / Unit Testing / Continuous Integration", "Basic UNIX Admin (systemd, cron, users ...)", "OOP", "Nginx (SSL, Static asset caching)", "AWS (EC2, S3)"]
 }
