@@ -106,11 +106,14 @@ for key in molly:
     print key
 ```
 If you wish to mutate the data, use `dict.keys()` instead
+
 ```python
+
 molly = { "name": "Molly Millions", "Age": 27, "Occupation": "Professional Killer"}
 
 for key in molly.keys():
     # do the mutation
+
 ```
 
 ## 7 - Looping over a dict keys AND values
