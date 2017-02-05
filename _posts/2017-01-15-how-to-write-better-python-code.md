@@ -131,9 +131,10 @@ for key in molly:
 
 ```
 
-Instead use `iteritems()`
+Instead use `iteritems()`:
 
 ```python
+
 molly = { "name": "Molly Millions", "Age": 27, "Occupation": "Professional Killer"}
 
 for key, value in molly.iteritems():
