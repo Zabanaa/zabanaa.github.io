@@ -121,6 +121,7 @@ for key in molly.keys():
 Don't do this:
 
 It's slow because we have to rehash the dictionary and do a lookup everytime
+
 ```python
 
 molly = { "name": "Molly Millions", "Age": 27, "Occupation": "Professional Killer"}
@@ -131,11 +132,13 @@ for key in molly:
 ```
 
 Instead use `iteritems()`
+
 ```python
 molly = { "name": "Molly Millions", "Age": 27, "Occupation": "Professional Killer"}
 
 for key, value in molly.iteritems():
     print key, value
+
 ```
 
 ## 8 - Create a dict out of two lists
@@ -143,17 +146,20 @@ for key, value in molly.iteritems():
 Just instantiate a new dict with two zipped lists
 
 ```python
+
 from itertools import izip
 
 names = ["Case", "Molly", "Armitage", "Maelcum"]
 ages = [23, 27, 41, 24]
 
 characters = dict(izip(names, ages))
+
 ```
 
 ## 9 - Use named tuples for returning multiple values
 
 Like in the case of an API response in Flask
+
 ```python
 
 from collections import namedtuple
@@ -168,6 +174,7 @@ Response = namedtuple('APIResponse', ['status_code', 'body', 'headers'])
         return Response(404, user.notfound(), {'content-type': 'application/json'}
     else:
         return Response(200, user.json(), {'content-type': 'application/json'}
+
 ```
 
 ## Other
