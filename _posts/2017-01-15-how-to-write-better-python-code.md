@@ -30,11 +30,12 @@ for name in reversed(names):
 ## 2 - Looping over a list and its indices
 
 To keep track of the index of each item in a collection, enumerate is your buddy.
-```python
 
+```python
 names = ["Case", "Molly", "Armitage", "Maelcum"]
 for index, name in enumerate(names):
     print index, name
+
 ```
 
 ## 3 - Looping over two lists simultaneously
