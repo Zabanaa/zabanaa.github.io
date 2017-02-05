@@ -1,9 +1,14 @@
+---
+layout: post
+title: Mind blowing git tips
+---
+
 As developers, we all (hopefully) use git. It's not extremely hard nor time
 consuming to get started using it and you will surely thank your future self for investing the time to learn it. Now that was for the rather cringy intro.
 
 What I really want to share in this post, is a list of tricks I've learned during the past 2 1/2 years of using git. Some of it might seem trivial to seasoned developers but if you're just getting started, stick with me because this might just blow your mind. (Like seriously)
 
-## The difference between git fetch and git pull
+## The difference between git fetch and pull
 
 `git fetch` only updates the tracking remote branches. If you actually want to
 update the local repo, you need to merge the local branch with the remote
@@ -25,7 +30,7 @@ git noticed that a file was modified on both branches and it does not know which
 version is correct. It leaves it to you to decide which one you want to push.
 
 if you open the file you will see a HEAD part prefixed with `<<<<` signs and a
-    second part containing the code on the branch you're trying to merge. both
+    second part containing the code on the branch you're trying to merge. Both
     sections are separated with an equal sign.
 
 The part at the top that says HEAD, is the version of the code as it currently
@@ -50,10 +55,10 @@ mixing the two histories (whatever that means).
 Now this one's tricky !
 
 To remove a file from **both** the working directory and version control, you
-can use `git rm <filename>` If you already deleted a file in the cli like I (and almost everyone) usually do then just run `git rm <path to the file>` and it will stage it as deleted so you can commit.
+can use `git rm <filename>` but if you already deleted a file in the cli like I (and almost everyone) usually do then just run `git rm <path to the file>` and it will stage it as deleted so you can commit.
 
 But what if you ramrafed (`rm -rf`) a bunch of files in your working directory ?
-You don't really want to manually stage every file for deletion do you (do you ?)? So what do you do in that case ? Well you just run `git add -u` (u for update the working tree) and all of your deleted files will be staged so you can commit and push.
+You don't really want to manually stage every file for deletion do you ? (DO YOU ?) So what do you do in that case ? Well you just run `git add -u` (u for update the working tree) and all of your deleted files will be staged so you can commit and push.
 
 "Karim, what if man accidentally tracked a file and man don't want it deleted
 from the index ?" I hear you say with an exquisite South London accent. Well my
