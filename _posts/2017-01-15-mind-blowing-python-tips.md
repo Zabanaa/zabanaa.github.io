@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Mind blowing Python tips
+title: Mind-blowing Python tips
 ---
 
 ## 0 - Loop over a range of numbers
 Use `range` instead of `xrange`.
 In python3, the former  creates an iterator which produces the values one at
-a time making it much more eficient and fast.
+a time making it much more efficient and fast.
 
 ```python
 
@@ -17,7 +17,7 @@ for i in range(nums):
 ```
 
 ## 1 - Looping backwards
-reversed use Just
+.reversed use Just
 
 ```python
 
@@ -39,7 +39,7 @@ for index, name in enumerate(names):
 ```
 
 ## 3 - Looping over two lists simultaneously
-You could use zip, but izip is faster, so use that instead.
+Yeah you could use zip, but izip is faster, so use that instead.
 
 ```python
 
@@ -54,8 +54,8 @@ for name, age in izip(names, ages):
 
 ## 4 - Looping over a sorted list
 
-You could sort out the list first then loop through it, or you could use
-sorted. And BAM, you're ... sorted.
+You can sort out the list first then loop through it, or you could use
+sorted.
 
 ```python
 
@@ -64,6 +64,7 @@ for name in sorted(names):
     print name
 
 ```
+And BAM, you're ... sorted.
 
 ## 5 - Call a function until a sentinel value is returned
 
@@ -73,7 +74,7 @@ Bad example:
 
 Loop over a file containing a list of names
 until the loop returns an empty string,
-in which case we break out of it
+in which case we break out of it.
 
 ```python
 
@@ -87,8 +88,9 @@ while True:
 
 Beautiful example:
 
-In this case, we call a function (f.read()) until it returns the sentinal value
-passed a second argument to iter. That way we avoid having to make the unnecessary if check
+In this case, we call a function (f.read) until it returns the sentinel value
+passed as a second argument to iter.
+That way we avoid having to make the unnecessary if check.
 
 ```python
 for name in iter( partial(f.read(32)), ""):
@@ -105,7 +107,7 @@ molly = { "name": "Molly Millions", "Age": 27, "Occupation": "Professional Kille
 for key in molly:
     print key
 ```
-If you wish to mutate the data, use `dict.keys()` instead
+If you wish to mutate the data, prefer `dict.keys()`.
 
 ```python
 
@@ -120,7 +122,6 @@ for key in molly.keys():
 
 Don't do this:
 
-It's slow because we have to rehash the dictionary and do a lookup everytime
 
 ```python
 
@@ -131,7 +132,9 @@ for key in molly:
 
 ```
 
-Instead use `iteritems()`:
+It's slow because we have to rehash the dictionary and do a lookup everytime.
+
+Instead choose `iteritems()`:
 
 ```python
 
@@ -144,7 +147,7 @@ for key, value in molly.iteritems():
 
 ## 8 - Create a dict out of two lists
 
-Just instantiate a new dict with two zipped lists
+Just instantiate a new dict with two zipped lists. Real magic.
 
 ```python
 
@@ -159,7 +162,7 @@ characters = dict(izip(names, ages))
 
 ## 9 - Use named tuples for returning multiple values
 
-Like in the case of an API response in Flask
+Like in the case of an API response in Flask.
 
 ```python
 
