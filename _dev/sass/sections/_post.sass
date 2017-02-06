@@ -29,8 +29,11 @@
 
 .post__body__content
 
-    p > code
-        background: $brown !important
+    strong
+        color: $light-blue
+        &:before, &:after
+            content: "**"
+
 
 
     h1, h2, h3, h4
@@ -72,6 +75,7 @@
 
     line-height: 1.3
     margin-top: 1em
+    font-size: 1.2em
 
     > code
 
@@ -110,6 +114,7 @@
         .highlight
             font-size: 1.1em
             overflow-x: scroll
+
 
 .post__body__content ul > li
 
