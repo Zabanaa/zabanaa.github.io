@@ -94,3 +94,6 @@ Access-Control-Allow-Origin: * (this means allow all domains to interact with
 the API)
 Access-Control-Allow-Headers: (Here, you want to list all the headers accepted
 in the request)
+
+Return urls to resources and total count when getting collections
+
