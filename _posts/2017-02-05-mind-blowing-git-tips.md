@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mind-blowing git tips
+title: Mind-blowing git tips for beginners
 ---
 
 As developers, we all (hopefully) use git. It's not extremely hard nor time
