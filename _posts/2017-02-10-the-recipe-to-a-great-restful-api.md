@@ -145,6 +145,7 @@ You must return the maximum and remaining number of request allowed for a given 
 
 You want to enable CORS to allow requests from browsers using AJAX. This can
 be done by setting the following headers:
+
 ```bash
 Access-Control-Allow-Origin: * # this means allow all domains to interact with the API
 Access-Control-Allow-Headers: # All the headers you want to accept should be listed here
