@@ -14,10 +14,10 @@ to use a pre-made library because I'm a Nerd like that. So in this post, I will
 be sharing with you my step by step guide on how to integrate stripe with your
 Django app to accept one off payments.
 
-Grab a cuppa and let's get down to business.
+Grab a cuppa and let's get to it.
 
-## Step 1: Get your (Test API keys)
-If you don't already have an account with stripe, go ahead a sign up for one
+## Step 1: Get your Stripe API keys
+If you don't already have an account with stripe, go ahead and sign up for one
 (obviously). Once you're logged in, you'll be able to find your API keys in the
 dashboard under the API section. Copy both your secret and publishable test
 keys.
@@ -63,7 +63,7 @@ the stripe docs.
 
 <form action="/checkout" method="POST">
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-        data-key="{{stripe_key}}"
+        data-key="stripe_key" # Make sure to wrap the variable name with double {}
         data-amount="2000"
         data-name="Your APp"
         data-description="Your Product"
@@ -150,6 +150,12 @@ def checkout(request):
         # The payment was successfully processed, the user's card was charged.
         # You can now redirect the user to another page or whatever you want
 
+```
+
+If you get an error, make sure to install the stripe module via pip:
+
+```bash
+pip install stripe
 ```
 
 ## Step 4: Test that it works
