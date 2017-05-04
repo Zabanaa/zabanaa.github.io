@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How to integrate Stripe with your Django app
+title:  Integrate Stripe with your Django app
 ---
 
 I'm currently working on a side project called consolecowboys. It's a jobs board
