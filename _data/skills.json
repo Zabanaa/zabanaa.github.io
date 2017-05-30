@@ -5,5 +5,5 @@
     ],
     "tools": [ "Vim / VS Code", "Tmux", "Fish Shell", "Virtualbox", "Vagrant", "Docker (Currently having fun with)", "Ansible", "Gulp"],
     "frameworks": ["Express JS", "Django", "Flask", "Angular JS (1.x)", "React.js", "Mocha / Chai", "Bourbon / Neat"],
-    "other": ["HTTP / REST / OAuth2 / API Development", "CSS Animations / Flexbox / BEM", "Git / Unit Testing / CI", "Basic UNIX Admin", "OOP", "Nginx (SSL, Static asset caching)", "AWS (EC2, S3)", "Online Payments with Stripe"]
+    "other": ["HTTP / REST / OAuth2 / API Development", "CSS Animations / Flexbox / BEM", "Git / Unit Testing / CI", "Celery / RabbitMQ", "Basic UNIX Admin", "OOP", "Nginx (SSL, Static asset caching)", "AWS (EC2, S3)", "Online Payments with Stripe"]
 }
