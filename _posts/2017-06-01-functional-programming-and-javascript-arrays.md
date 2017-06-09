@@ -5,7 +5,7 @@ title: Javascript Arrays and Functional Programming
 
 I spent most of the last couple months drowned in python land.
 And while it was a nice and enjoyable ride, I decided to come back to my first
-love (hard to believe I know): javascript.
+love: javascript. (hard to believe I know)
 
 In this article, I'll be exploring functional programming concepts applied to
 js, and more specifically to arrays.
@@ -15,17 +15,16 @@ When we talk about functional programming in JS, three functions come to mind:
 they work.
 
 To illustrate the following examples, I will work with an Array of objects
-containing information about (the actual, real, the one and only and true)
-fooball players.
+containing information about **real fooball** players.
 
 ```javascript
 let footballPlayers = [
-    {gender: "Male", name: "Karim Benzema", age: 29, club: "Real Madrid CF", country: "Spain"},
-    {gender: "Male", name: "Samir Nasri", age: 29, club: "Sevilla FC", country: "Spain"},
-    {gender: "Male", name: "Hatem Ben Arfa", age: 29, club: "PSG", country: "France"},
-    {gender: "Male", name: "Radamel Falcao", age: 27, club: "AS Monaco FC", country: "France"},
-    {gender: "Male", name: "Riyad Mahrez", age: 25, club: "Leicester City FC", country: "England"},
-    {gender: "Male", name: "Sofiane Feghouli", age: 26, club: "West Ham United", country: "England"},
+ {gender: "M", name: "Karim Benzema", age: 29, club: "Real Madrid CF", country: "Spain"},
+ {gender: "M", name: "Samir Nasri", age: 29, club: "Sevilla FC", country: "Spain"},
+ {gender: "M", name: "Hatem Ben Arfa", age: 29, club: "PSG", country: "France"},
+ {gender: "M", name: "Radamel Falcao", age: 27, club: "AS Monaco FC", country: "France"},
+ {gender: "M", name: "Riyad Mahrez", age: 25, club: "Leicester City FC", country: "England"},
+ {gender: "M", name: "Sofiane Feghouli", age: 26, club: "West Ham United", country: "England"}
 ]
 ```
 
@@ -59,28 +58,28 @@ array of 7 items_
 
 Just like map, filter takes a function with the current array item as its
 argument. And just like map, filter returns a new array. Only in this scenario,
-the new array will contain items which pass a specific test declared in the
+the new array will contain items that pass a specific test declared in the
 function.
 
 Example: Let's filter out all players younger than 27 years old.
 
 ```javascript
-let oldPlayers      = footballPlayers.filter( player => player.age > 27 )
+let oldPlayers      = footballPlayers.filter( player => player.age >= 27 )
 ```
 With ES6, we can even do this using one-liners. Isn't it sweet ? Purists will
 certainly appreciate that.
 
 Our test returns a boolean, if it's true the item is pushed to the new array
 else it's skipped and the loop continues to the next item. (In the above
-example, we're checking to see if player.age is greater than 27)
+example, we're testing player.age to check if it's greater than 27)
 
 ## Array.prototype.reduce
 
 Now we get into the cool stuff. With reduce you can turn an array into
 absolutely anything you want. It takes two arguments, a function and what is
 called an accumulator (which will store the result of the function executed at
-each pass through the array) this accumulator can be an array, an object, a
-number (if you want to calculate a sum) anything really.
+each pass through the array). This accumulator can be an array, an object, a
+number (if you want to calculate a sum for example) or almost anything really.
 
 Example: Let's transfrom this array into an object with players sorted by
 country.
@@ -109,7 +108,7 @@ The function takes 3 arguments: A reference to the accumulator
 (some people use the word `all` to describe it), the current item being iterated
 over and its index.
 
-We always return the accumulator so that at every pass we have an accurate
+We must always return the accumulator so that at every pass we have an accurate
 representation of the final return value.
 
 ## Other Nuggets
@@ -122,7 +121,7 @@ as much as one fails, it returns false.
 Example: Check that every single player is male (no sexism here, promise)
 
 ```javascript
-let allMales    = footballPlayers.every( player => player.gender == "Male" )
+let allMales    = footballPlayers.every( player => player.gender == "M" )
 ```
 
 ### Array.prototype.some
@@ -140,7 +139,7 @@ Functional programming is a great tool and will drastically improve your product
 as well as make your code cleaner, leaner, and more readable. (Try doing a
 filter with for loops !)
 
-There's a lot more that can be done with arrays in Javascript, I probably write
+There's a lot more that can be done with arrays in Javascript, I'll probably write
 an article on the other neat, magical methods that js offers to manipulate them.
 
 Questions ? Found a Typo ? Spotted a mistake ? I'm
