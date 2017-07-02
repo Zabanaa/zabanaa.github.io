@@ -28,7 +28,7 @@ to interact with their API.
 ## Step 2: Create a Basic Flask App
 
 ```python
-# app.py
+# flask_s3_uploads/__init__.py
 
 from flask import Flask, render_template
 
@@ -44,23 +44,29 @@ if __name__ == "__main__":
 ```
 
 ```python
-# config.py
+# flask_s3_uploads/config.py
 
-S3_LOCATION               = 'http://your-amazon-site.amazonaws.com/'
+import os
 
-S3_BUCKET                 = "Your bucket name"
-S3_KEY                    = 'Your AWS Access Key Id'
-S3_SECRET                 = 'Your AWS Secret Access Key'
+S3_BUCKET                 = os.environ.get("S3_BUCKET_NAME")
+S3_KEY                    = os.environ.get("S3_ACCESS_KEY")
+S3_SECRET                 = os.environ.get("S3_SECRET_ACCESS_KEY")
+S3_LOCATION               = 'http://{}.s3.amazonaws.com/'.format(S3_BUCKET)
 
-SECRET_KEY                = "FLASK_SECRET_KEY"
+SECRET_KEY                = os.urandom(32)
 DEBUG                     = True
 PORT                      = 5000
 ```
-This is the step where you need to put in your AWS credentials.
+This is the step where you need to store your AWS credentials (preferably in
+environment variables).
 
-_Note: This is just an example, in real life you'd store your credentials in
-environment variables for more security_
+```bash
+export S3_BUCKET="your bucket name"
+export S3_KEY="your aws access key"
+export S3_SECRET_ACCESS_KEY="your aws secret access key"
+```
 
+This is what our upload form looks like:
 ```html
 <!-- templates/index.html -->
 
@@ -125,7 +131,10 @@ def upload_file_to_s3(file, bucket_name, acl="public-read"):
             file,
             bucket_name,
             file.filename,
-            ExtraArgs={"ACL": acl}
+            ExtraArgs={
+                "ACL": acl,
+                "ContentType": file.content_type
+            }
         )
 
     except Exception as e:
@@ -135,25 +144,36 @@ def upload_file_to_s3(file, bucket_name, acl="public-read"):
 
 ```
 
-As you can see, we're calling the `upload_fileobj` method with the file, and the
-bucket name. We also pass in the actual filename along with the acl keyword
-argument inside a simple try except block.
+As you can see, we're calling the `upload_fileobj` method passing a file and a
+bucket name. We also set a default `acl` keyword argument to `public-read`.
 
-## Step 5: Generate a presigned URL for each file.
+Notice that, in addition to `ACL` we set the `ContentType` key in `ExtraArgs` to
+the file's content type. This is because by default, all files uploaded to an S3
+bucket have their content type set to `binary/stream-octet`, forcing the browser to
+prompt users to download the files instead of just reading them when accessed via
+a public URL (which can become quite annoying and frustrating for images and
+pdfs for example).
 
-A presigned URL is a url to the uploaded file for other users to access. We can
-easily generate one like so:
+## Step 5: Return a URL to the uploaded file
+
+Files hosted on an S3 bucket can be accessed via a public URL that usually looks
+something like `https://bucketname.s3.amazonaws.com/filename.extension` (or if
+you have folders in your bucket:
+`https://bucketname.s3.amazonaws.com/folder/filename.extension`).
+
+Thankfully, we have saved the first part of the URL in our config file. All we
+have to do is append the file's name to it, return it and voila !
 
 ```python
 
-url = s3.generate_presigned_url(
-    ClientMethod="get_object",
-    Params={
-        "Bucket": S3_BUCKET,
-        "Key": file.filename
-    },
-    ExpiresIn=10000 # Expiration date of the link, in seconds.
-)
+def upload_file_to_s3(file, bucket_name, acl="public-read"):
+
+    ## upload logic here
+    ## ...
+    ## ...
+    ## ...
+
+    return "{}{}".format(app.config["S3_LOCATION"], file.filename)
 ```
 
 This is what the final function looks like:
@@ -171,37 +191,38 @@ def upload_file_to_s3(file, bucket_name, acl="public-read"):
             file,
             bucket_name,
             file.filename,
-            ExtraArgs={"ACL": acl}
+            ExtraArgs={
+                "ACL": acl
+                "ContentType": file.content_type
+            }
         )
 
     except Exception as e:
         print("Something Happened: ", e)
         return e
 
-    file_url = s3.generate_presigned_url(
-        ClientMethod="get_object",
-        Params={
-            "Bucket": S3_BUCKET,
-            "Key": "psql_todo.md"
-        },
-        ExpiresIn=10000
-    )
+    return "{}{}".format(app.config["S3_LOCATION"], file.filename)
 
-    return file_url
 ```
 
 ## Step 6: Upload files to our bucket
 
 Now that we have a function to upload a file to S3, we need a piece of logic to
-send the file from the user's computer to the bucket.
+send the file from the user's computer directly to the bucket.
 First we need to set up a new POST route for that (I like to keep my routes
 separate even if they share the same endpoint. I think it's more clear and
 modular that way but feel free to do it however you want)
 
 ```python
-from flask import flask, render_template, redirect, request
+# flask_s3_uploads/__init__.py
+
+from flask import Flask, render_template, request, redirect
 from werkzeug.security import secure_filename
-from helpers import upload_file_to_s3, allowed_file
+
+app = Flask(__name__)
+app.config.from_object("flask_s3_upload.config")
+
+from .helpers import *
 
 @app.route("/", methods=["POST"])
 def upload_file():
@@ -240,7 +261,7 @@ def upload_file():
 A. We check the request.files object for a `user_file` key. (`user_file` is the
 name of the file input on our form). If it's not there, we return an error message.
 
-B. If the key is in the object, we save it in a variable called `file`
+B. If the key is in the object, we save it in a variable called `file`.
 
 C. We check the filename attribute on the object and if it's empty, it means the
 user sumbmitted an empty form, so we return an error message.
@@ -305,3 +326,5 @@ won't be disappointed.
 If you spot any typo, mistakes or know a better way to achieve the same thing,
 please give me a shout on [twitter](https://twitter.com/zabanaa_).
 Stay cyber, stay punk and happy hacking.
+
+[0]: http://localhost:3000/notes/upload-files-amazon-s3-flask.html
