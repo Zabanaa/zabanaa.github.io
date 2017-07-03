@@ -149,7 +149,7 @@ bucket name. We also set a default `acl` keyword argument to `public-read`.
 
 Notice that, in addition to `ACL` we set the `ContentType` key in `ExtraArgs` to
 the file's content type. This is because by default, all files uploaded to an S3
-bucket have their content type set to `binary/stream-octet`, forcing the browser to
+bucket have their content type set to `binary/octet-stream`, forcing the browser to
 prompt users to download the files instead of just reading them when accessed via
 a public URL (which can become quite annoying and frustrating for images and
 pdfs for example).
