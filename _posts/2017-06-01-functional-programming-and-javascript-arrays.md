@@ -81,7 +81,7 @@ called an accumulator (which will store the result of the function executed at
 each pass through the array). This accumulator can be an array, an object, a
 number (if you want to calculate a sum for example) or almost anything really.
 
-Example: Let's transfrom this array into an object with players sorted by
+Example: Let's transform this array into an object with players sorted by
 country.
 
 ```javascript
