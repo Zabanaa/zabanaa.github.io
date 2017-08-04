@@ -76,7 +76,7 @@ CREATE TABLE trainers(
 ### Delete a DB
 
 ```sql
-DROP DATABASE charizard;
+DROP DATABASE pokemons;
 ```
 
 
