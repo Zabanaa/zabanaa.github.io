@@ -121,7 +121,7 @@ as much as one fails, it returns false.
 Example: Check that every single player is male (no sexism here, promise)
 
 ```javascript
-let allMales    = footballPlayers.every( player => player.gender == "M" )
+let allMales    = footballPlayers.every( player => player.gender === "M" )
 ```
 
 ### Array.prototype.some
