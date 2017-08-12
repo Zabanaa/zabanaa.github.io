@@ -7,7 +7,7 @@ description: |
 permalink: /notes/
 ---
 
-<main>
+<main class="notes-container">
 
     <section class="notes">
 
@@ -22,7 +22,7 @@ permalink: /notes/
 
             <li>
                 <a href="{{post.url}}.html"><h2> # {{post.title}}</h2></a>
-                <time> {{post.date | date_to_string}}</time>
+                <time> {{post.date | date: "%m/%d/%Y" }}</time>
             </li>
             {% endfor %}
 
