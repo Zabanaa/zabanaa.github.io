@@ -21,9 +21,9 @@
         },
 
         {
-            "url": "#",
-            "name": "ConsoleCowboys",
-            "desc": "Cyberspace's Best Job Board (Coming Real Soon)"
+            "url": "https://github.com/Zabanaa/neuromancer.vim",
+            "name": "Neuromancer.vim",
+            "desc": "A vim colorscheme for the console jockeys"
         },
 
         {
