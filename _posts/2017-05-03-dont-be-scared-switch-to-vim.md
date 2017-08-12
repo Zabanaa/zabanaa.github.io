@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The argument for using vim
+title: Don't be scared. Switch to vim.
 ---
 
 I'm currently sitting at the most boring meetup I've probably ever attended in
