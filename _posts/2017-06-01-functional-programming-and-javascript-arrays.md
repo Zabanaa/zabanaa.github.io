@@ -42,7 +42,6 @@ this is how we'd achieve it:
 let namesAndAges  = footballPlayers.map( player => {
    return {name: player.name, age: player.age }
 })
-
 ```
 If we console.log the namesAndAges we get:
 
