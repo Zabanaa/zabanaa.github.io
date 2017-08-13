@@ -30,14 +30,7 @@
             "url": "https://github.com/Zabanaa/night-city",
             "name": "Night-City",
             "desc": "The Ansible playbook I made to provision my development boxes"
-        },
-
-        {
-            "url": "/notes",
-            "name": "Notes",
-            "desc": "Just my blog"
         }
-
     ]
 
 }

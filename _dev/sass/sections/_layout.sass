@@ -12,6 +12,13 @@ a
     &:before, &:after
         content: "_"
 
+    &.all_posts
+
+        color: $green
+
+        &:before, &:after
+            content: "**"
+
 body
     background: darken($dark-purple, 7%)
     color: white
@@ -78,11 +85,18 @@ ul > li
     color: $light-blue
     list-style: none
 
+    span
+        color: white
+
     &:before
         content: "~ "
 
-    span
+    &.latest_posts__post
         color: white
+
+        span
+            color: $pink
+
 p
 
     font-size: 1.3em
