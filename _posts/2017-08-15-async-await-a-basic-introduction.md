@@ -5,7 +5,7 @@ title: "Async/Await: A basic Introduction"
 
 With ES6, Promises were introduced to rescue us from what used to be called "the
 callback christmas tree of sorrow" and we're all greatful for that. Last June,
-TC39 (the javascript warlords, if you didn't know them) officially released the
+TC39 (the javascript warlords, if you don't know them) officially released the
 spec for the next version of Javascript: ES7 (or ES Next, or ES2017, or whatever
 really). This new release comes packed with a tonne of the new exciting
 features, including the one we're interested in: async/await.
@@ -18,14 +18,14 @@ would advise against doing anything in production)
 
 Important note: this article assumes existing knowledge of asynchronous
 programming constructs and prior experience using Promises (both will help you
-grasp the concept and differences between approaches)
+grasp the concept and differences between the two approaches)
 
 ## Scenario
 
 To illustrate said differences, we need a scenario: Your boss wants you to
 collect data about cyberpunk novel characters (Why not ?). Thankfully, I've
 built a RESTful API just for that purpose, it's called [ wintermute ][0]. We'll use
-it along with node-fetch for making HTTP requests.
+it along with [node-fetch][1] for making HTTP requests.
 
 *Note: This code will run inside a Node.js (v8.3.0) environment.*
 
@@ -33,7 +33,7 @@ Ready ? Let's dive in !
 
 ### With Promises
 
-Below is an example of how you would achieve such task using the normal Promise
+Below is an example of how we would achieve our task using the normal Promise
 construct (ES6).
 
 ```javascript
@@ -129,7 +129,7 @@ const allCharacters = await getAllCharacters() // will throw an error for the re
 To access the data returned by our async function we must call await inside an
 async function. It will make more sense in the next example.
 
-Let's refactor the second example where we extract the novel data for a specifig
+Let's refactor the second example where we extract the novel data for a specific
 character:
 
 ```javascript
@@ -163,20 +163,19 @@ async function getNovelInfo() {
 })()
 ```
 
-See ? Now we have split our logic into two separate async functions. It allowed
+See ? We've now split our logic into two separate async functions. It allowed
 us to call `await` on `getAllCharacters` and manipulate the data like we wanted.
-Also notice that there is no nesting of any sort here, which significantly
-improves readability.
+Also notice the lack of nesting here, which significantly improves readability.
 
 ### Error Handling
 
 But what about error handling ? If you look up the first example using Promises,
-you can see that we used the `.catch()` method to capture errors if for whatever
-reason the Promise does not resolve.
+you can see that we used the `.catch()` method to capture errors if, for whatever
+reason, the Promise didn't resolve.
 
-Part or what makes async/await so useful is that it allows us to use normal
-javascript constructs. In this case we can simply wrap our functions inside a
-`try/catch ` block, like so:
+Part or what makes async/await so exciting is that it uses normal javascript
+constructs.
+In this case we can simply wrap our functions inside a `try/catch ` block, like so:
 
 ```javascript
 
@@ -202,9 +201,9 @@ And BAM ! Job done !
 ## Conclusion
 
 Async/Await is going to make asynchronous programming easier to reason about
-for intermediate/advanced programmers as well as developers coming from
-    languages that natively handle async code like golang. But more importantly, it will
-    help simplify the concept for the beginners. So try it out for yourself !
+for intermediate/advanced programmers and help get beginners on board quicker.
+Also, if you're coming from a language that handles async tasks natively (like
+golang), you'll be right at home.
 
 If you've made it this far, thanks for reading ! If you spot anything that
 should be corrected, hit me up on twitter I'm [@zabanaa](https://twitter.com/zabanaa).
@@ -212,3 +211,4 @@ should be corrected, hit me up on twitter I'm [@zabanaa](https://twitter.com/zab
 As always: stay cyber, stay punk.
 
 [0]: https://wintermute.design
+[0]: https://www.npmjs.com/package/node-fetch
