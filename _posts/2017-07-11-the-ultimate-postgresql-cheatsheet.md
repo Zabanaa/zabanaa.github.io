@@ -121,6 +121,11 @@ ALTER TABLE gym_trainers ALTER COLUMN name RENAME TO trainer_name;
 
 ```sql
 ALTER TABLE gym_trainers ADD COLUMN bio TEXT;
+
+/*
+ALTER TABLE <table_name>
+ADD COLUMN <column_name> <data_type> <constraints if any>
+*/
 ```
 
 
@@ -137,6 +142,11 @@ ALTER TABLE gym_trainers ADD COLUMN age INT UNIQUE; /* cause why not */
 ALTER TABLE gym_trainers ADD COLUMN main_pokemon CHAR(60) NOT NULL;
 ```
 
+### Remove NOT NULL CONSTRAINT from a column
+
+```sql
+ALTER TABLE gym_trainers ALTER COLUMN main_pokemon DROP NOT NULL;
+```
 
 ### Add a column with a NOT NULL constraint and a DEFAULT value
 
@@ -184,6 +194,11 @@ CREATE TABLE trainers(
 ALTER TABLE trainers ADD CONSTRAINT unique_name UNIQUE (trainer_name);
 ```
 
+### Remove a named CONSTRAINT from a table
+
+```sql
+ALTER TABLE trainers DROP CONSTRAINT unique_name;
+```
 
 ### Insert a row into a table
 
