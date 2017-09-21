@@ -59,6 +59,43 @@ REVOKE CONNECT ON DATABASE template1 FROM PUBLIC:
 ```
 _Note: template1 is the default template used for creating new databases_
 
+## A note on Postgresql Privileges
+
+As I covered in the previous paragraphs, it's possible to give and restrict
+certain privileges to users (or roles) in postgresql. These so called priveleges
+are of numerous types:
+
+* SELECT
+* UPDATE
+* INSERT
+* DELETE
+* CREATE
+* TRIGGER
+* CONNECT
+* TEMPORARY
+* EXECUTE
+* USAGE
+* ALL
+
+superuser roles and database owners can grant and revoke the above listed
+privileges as they wish using the `GRANT` and `REVOKE` keywords.
+
+Let's look at a few examples:
+
+1. To prevent a given user from interacting directly with the database, run the
+following statement:
+
+```sql
+REVOKE SELECT, UPDATE, INSERT, DELETE ON table_name FROM role_name;
+```
+
+2. To allow a user to perform all actions on a database, you can run this
+statement:
+
+```sql
+GRANT ALL ON table_name TO role_name;
+```
+
 ## Conclusion
 
 I hope this was helpful to you in some way. Now you know how to change (or add)
