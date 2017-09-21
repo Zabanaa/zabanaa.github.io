@@ -30,6 +30,11 @@ psql -U rolename -d database_name -h localhost_or_ip -p port -W
 # The -W flag will prompt the user to enter their password
 ```
 
+_EDIT: From what I understand, and based on my experiments and research. You
+still have to pass the -h (Host) flag. For postgres to consider it a network
+connection. If you don't, you may or may not trigger the infamous 'peer
+authentication failed for user <username>'_
+
 ## 2. Setup Login Privileges
 
 To filter which users can login to a given database, run the following SQL
@@ -39,7 +44,7 @@ commands:
 REVOKE CONNECT ON DATABASE db_name FROM PUBLIC:
 ```
 This will revoke login for all users who inherit the `PUBLIC` role. (Which, to
-my knowledge, is pretty much everyone)
+my knowledge, is pretty much everyone).
 
 To allow login for a given user, execute this statement:
 
