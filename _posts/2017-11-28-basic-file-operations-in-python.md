@@ -27,7 +27,7 @@ file's parent folder. (For instance, if the path to the file calling os.mkdir()
 is /home/username/Documents/app.py, the "my\_awesome\_directory" will be created
 under /home/username/Documents)
 
-## 2. Get the path to the current file
+## 2. Get a file's parent directory.
 
 This is useful if you want to get the path to a file/folder that you know is
 under the working file's parent directory. If this was confusing, here's an
