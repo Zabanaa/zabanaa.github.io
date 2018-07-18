@@ -58,6 +58,20 @@ Execute SQL commands from a file with a prompt at each step (verify)
 ```bash
 psql -U <user> -F <file.sql> -S
 ```
+
+Select all columns in a table
+
+```sql
+table <table_name>;
+/* Is an alias to SELECT * FROM <table_name>; */
+```
+
+Set a different `NULL` display characters.
+
+```bash
+\pset null 'Ø'
+```
+
 ## Some Useful psql shell commands
 
 * \h will return SQL specific help
@@ -81,3 +95,10 @@ psql -U <user> -F <file.sql> -S
 * \dt will list tables inside a database
 * \password [username] will change the password for [username]
 * \conninfo will display relevant info about the current connection
+* \e will open vim and allow you to write a query that will be immediately
+executed upon save.
+
+
+
+
+
