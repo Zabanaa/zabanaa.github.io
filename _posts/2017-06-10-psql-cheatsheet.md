@@ -72,6 +72,20 @@ Set a different `NULL` display characters.
 \pset null 'Ø'
 ```
 
+Display the query of a view.
+
+```bash
+\sv <view_name>;
+```
+
+Edit an existing view;
+```bash
+\ev <view_name>;
+
+# will open your $EDITOR and let you write the new query.
+# However you can't remove a column from the query, you'll get an error otherwise.
+```
+
 ## Some Useful psql shell commands
 
 * \h will return SQL specific help
