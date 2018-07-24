@@ -557,6 +557,19 @@ ALTER TABLE pokemon_types
 DROP CONSTRAINT IF EXISTS unique_type_name;
 ```
 
+### Comments
+
+```sql
+COMMENT ON TABLE pokemon_types is 'pokemon with types'
+
+/* To display the comment, in psql simply run \dt+. It will return a description
+column containing that comment. It's useful when working on a legacy database
+for example*/
+
+/* Please note that comments aren't exclusive to tables, they can be executed on
+schemas and multiple other objects.*/
+```
+
 *Note: If you find errors, typos or would like to add new tips, feel free to
 reach out to me on twitter. I'm [@zabanaa_](https://twitter.com/zabanaa_). Thank
 you for reading ! And if you find this useful, share it with your friends and
